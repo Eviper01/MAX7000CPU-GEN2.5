@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'AT24C64B_10PU_2.7'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Microchip", "AT24C64B-10PU-2.7" (!) = "", "DIP795W46P254L952H572Q8N", "Dual-In-Line Packages", "", "", "Atmel AT24C64B-10PU-2.7 EEPROM Memory, 64kbit, 0.6us, 1.8  5.5 V 8-Pin PDIP", "", "5.715 mm"
+END_PART
+
+END.

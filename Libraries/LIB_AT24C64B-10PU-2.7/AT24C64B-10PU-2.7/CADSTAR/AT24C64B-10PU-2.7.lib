@@ -1,0 +1,16 @@
+.AT24C64B-10PU-2.7 :1 ;Atmel AT24C64B-10PU-2.7 EEPROM Memory, 64kbit, 0.6us, 1.8  5.5 V 8-Pin PDIP
+DIP795W46P254L952H572Q8N
+*STM U
+*NGS
+*PLB 1="A0" 2="A1" 3="A2" 4="GND" 5="SDA" 6="SCL" 7="WP" 8="VCC"
+*MXP 8
+*DFN AT24C64B-10PU-2.7
+~!Mouser Part Number (-)
+~!Mouser Price/Stock (-)
+~!Manufacturer_Name (Microchip)
+~!Manufacturer_Part_Number (AT24C64B-10PU-2.7)
+~!Link Datasheet (-)
+~!Height (5.715mm)
+~!3D_Model (AT24C64B-10PU-2.7)
+AT24C64B-10PU-2.7
+1.1!I 2.1!I 3.1!I 4.1!P 8.1!P 7.1!I 6.1!I 5.1!U 

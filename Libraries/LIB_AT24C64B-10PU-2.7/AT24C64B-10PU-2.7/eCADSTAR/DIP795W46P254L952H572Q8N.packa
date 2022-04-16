@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "AT24C64B-10PU-2_7"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2020-10-27-12:23:17)
+    (mountForm default
+        (footprintRef "DIP795W46P254L952H572Q8N")
+        (spec "System")
+    )
+)

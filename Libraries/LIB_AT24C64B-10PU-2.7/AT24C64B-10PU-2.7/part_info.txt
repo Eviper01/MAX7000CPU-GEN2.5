@@ -1,0 +1,9 @@
+Manufacturer=Microchip
+PartNumber=AT24C64B-10PU-2.7
+PartCategory=Undefined or Miscellaneous
+PackageCategory=Dual-In-Line Packages
+PinCount=8
+Version=1.2
+Released=
+Downloaded=2022-03-03 02:31:53
+3D=Y
