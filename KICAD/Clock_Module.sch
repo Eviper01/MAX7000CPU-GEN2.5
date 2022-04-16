@@ -1,0 +1,523 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 9
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MAX7000CPU-Gen2_5-rescue:NE555P-Timer-MAX7000CPU-Gen2-rescue U2
+U 1 1 62218A43
+P 4350 2400
+F 0 "U2" H 4000 2850 50  0000 C CNN
+F 1 "NE555P" H 4100 2750 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5000 2000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 5200 2000 50  0001 C CNN
+	1    4350 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R2
+U 1 1 62218A49
+P 4950 2000
+F 0 "R2" H 5020 2046 50  0000 L CNN
+F 1 "1M" H 5020 1955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4880 2000 50  0001 C CNN
+F 3 "~" H 4950 2000 50  0001 C CNN
+	1    4950 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R4
+U 1 1 62218A4F
+P 3700 2050
+F 0 "R4" H 3550 2150 50  0000 L CNN
+F 1 "1K" H 3550 2050 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3630 2050 50  0001 C CNN
+F 3 "~" H 3700 2050 50  0001 C CNN
+	1    3700 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:C-Device-MAX7000CPU-Gen2-rescue C76
+U 1 1 62218A55
+P 4950 2850
+F 0 "C76" H 5065 2896 50  0000 L CNN
+F 1 "100n" H 5065 2805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4988 2700 50  0001 C CNN
+F 3 "~" H 4950 2850 50  0001 C CNN
+	1    4950 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:C-Device-MAX7000CPU-Gen2-rescue C75
+U 1 1 62218A5B
+P 3700 2850
+F 0 "C75" H 3815 2896 50  0000 L CNN
+F 1 "10n" H 3815 2805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3738 2700 50  0001 C CNN
+F 3 "~" H 3700 2850 50  0001 C CNN
+	1    3700 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 2150 4950 2400
+Wire Wire Line
+	4850 2400 4950 2400
+Connection ~ 4950 2400
+Wire Wire Line
+	4950 2400 4950 2600
+Wire Wire Line
+	4850 2600 4950 2600
+Connection ~ 4950 2600
+Wire Wire Line
+	4950 2600 4950 2700
+Wire Wire Line
+	3700 1850 3700 1900
+Wire Wire Line
+	3700 2200 3850 2200
+Wire Wire Line
+	3850 2400 3700 2400
+Wire Wire Line
+	3700 2400 3700 2700
+Wire Wire Line
+	3850 2600 3800 2600
+Wire Wire Line
+	3800 2600 3800 1850
+Wire Wire Line
+	3700 1850 3800 1850
+Connection ~ 3800 1850
+Wire Wire Line
+	3800 1850 4350 1850
+Wire Wire Line
+	4950 3000 4350 3000
+Wire Wire Line
+	4350 2800 4350 3000
+Connection ~ 4350 3000
+Wire Wire Line
+	4350 3000 3700 3000
+$Comp
+L MAX7000CPU-Gen2_5-rescue:SW_Push-Switch-MAX7000CPU-Gen2-rescue SW2
+U 1 1 62218A75
+P 3500 2200
+F 0 "SW2" H 3300 2300 50  0000 C CNN
+F 1 "SW_Push" H 3500 2150 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 3500 2400 50  0001 C CNN
+F 3 "~" H 3500 2400 50  0001 C CNN
+	1    3500 2200
+	1    0    0    -1  
+$EndComp
+Connection ~ 3700 2200
+Wire Wire Line
+	3300 2200 3300 3000
+Wire Wire Line
+	3300 3000 3700 3000
+Connection ~ 3700 3000
+$Comp
+L MAX7000CPU-Gen2_5-rescue:+5V-power-MAX7000CPU-Gen2-rescue #PWR08
+U 1 1 62218A7F
+P 4350 1850
+F 0 "#PWR08" H 4350 1700 50  0001 C CNN
+F 1 "+5V" H 4365 2023 50  0000 C CNN
+F 2 "" H 4350 1850 50  0001 C CNN
+F 3 "" H 4350 1850 50  0001 C CNN
+	1    4350 1850
+	1    0    0    -1  
+$EndComp
+Connection ~ 4350 1850
+Wire Wire Line
+	4350 1850 4950 1850
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR010
+U 1 1 62218A87
+P 4350 3000
+F 0 "#PWR010" H 4350 2750 50  0001 C CNN
+F 1 "GND" H 4355 2827 50  0000 C CNN
+F 2 "" H 4350 3000 50  0001 C CNN
+F 3 "" H 4350 3000 50  0001 C CNN
+	1    4350 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 2000 4350 1850
+Text GLabel 4900 1700 2    50   Output ~ 0
+UserCLK
+Wire Wire Line
+	4850 2200 4850 1700
+Wire Wire Line
+	4850 1700 4900 1700
+Wire Wire Line
+	5350 2150 5350 2950
+Wire Wire Line
+	6050 2950 5750 2950
+Connection ~ 6050 2950
+Wire Wire Line
+	6900 1700 6950 1700
+Wire Wire Line
+	6900 2150 6900 1700
+Text GLabel 6950 1700 2    50   Output ~ 0
+CLK_Select
+Wire Wire Line
+	5850 1800 6400 1800
+Wire Wire Line
+	6400 1950 6400 1800
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR09
+U 1 1 62218AA9
+P 6050 2950
+F 0 "#PWR09" H 6050 2700 50  0001 C CNN
+F 1 "GND" H 6055 2777 50  0000 C CNN
+F 2 "" H 6050 2950 50  0001 C CNN
+F 3 "" H 6050 2950 50  0001 C CNN
+	1    6050 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 1800 7000 1800
+Connection ~ 6400 1800
+$Comp
+L MAX7000CPU-Gen2_5-rescue:+5V-power-MAX7000CPU-Gen2-rescue #PWR07
+U 1 1 62218AB1
+P 6400 1800
+F 0 "#PWR07" H 6400 1650 50  0001 C CNN
+F 1 "+5V" H 6415 1973 50  0000 C CNN
+F 2 "" H 6400 1800 50  0001 C CNN
+F 3 "" H 6400 1800 50  0001 C CNN
+	1    6400 1800
+	1    0    0    -1  
+$EndComp
+Connection ~ 5750 2950
+Wire Wire Line
+	5350 2950 5750 2950
+Connection ~ 5750 2150
+$Comp
+L MAX7000CPU-Gen2_5-rescue:SW_Push-Switch-MAX7000CPU-Gen2-rescue SW1
+U 1 1 62218ABA
+P 5550 2150
+F 0 "SW1" H 5350 2250 50  0000 C CNN
+F 1 "SW_Push" H 5550 2100 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 5550 2350 50  0001 C CNN
+F 3 "~" H 5550 2350 50  0001 C CNN
+	1    5550 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 2950 6050 2950
+Connection ~ 6400 2950
+Wire Wire Line
+	6400 2750 6400 2950
+Wire Wire Line
+	7000 2950 6400 2950
+Connection ~ 5850 1800
+Wire Wire Line
+	5750 1800 5850 1800
+Wire Wire Line
+	5850 2550 5850 1800
+Wire Wire Line
+	5900 2550 5850 2550
+Wire Wire Line
+	5750 2350 5750 2650
+Wire Wire Line
+	5900 2350 5750 2350
+Wire Wire Line
+	5750 2150 5900 2150
+Wire Wire Line
+	5750 1800 5750 1850
+Wire Wire Line
+	7000 2550 7000 2650
+Connection ~ 7000 2550
+Wire Wire Line
+	6900 2550 7000 2550
+Wire Wire Line
+	7000 2350 7000 2550
+Connection ~ 7000 2350
+Wire Wire Line
+	6900 2350 7000 2350
+Wire Wire Line
+	7000 2100 7000 2350
+$Comp
+L MAX7000CPU-Gen2_5-rescue:C-Device-MAX7000CPU-Gen2-rescue C73
+U 1 1 62218AD3
+P 5750 2800
+F 0 "C73" H 5865 2846 50  0000 L CNN
+F 1 "10n" H 5865 2755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5788 2650 50  0001 C CNN
+F 3 "~" H 5750 2800 50  0001 C CNN
+	1    5750 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:C-Device-MAX7000CPU-Gen2-rescue C74
+U 1 1 62218AD9
+P 7000 2800
+F 0 "C74" H 7115 2846 50  0000 L CNN
+F 1 "100n" H 7115 2755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 7038 2650 50  0001 C CNN
+F 3 "~" H 7000 2800 50  0001 C CNN
+	1    7000 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R3
+U 1 1 62218ADF
+P 5750 2000
+F 0 "R3" H 5600 2100 50  0000 L CNN
+F 1 "1K" H 5600 2000 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5680 2000 50  0001 C CNN
+F 3 "~" H 5750 2000 50  0001 C CNN
+	1    5750 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R1
+U 1 1 62218AE5
+P 7000 1950
+F 0 "R1" H 7070 1996 50  0000 L CNN
+F 1 "1M" H 7070 1905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6930 1950 50  0001 C CNN
+F 3 "~" H 7000 1950 50  0001 C CNN
+	1    7000 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:NE555P-Timer-MAX7000CPU-Gen2-rescue U1
+U 1 1 62218AEB
+P 6400 2350
+F 0 "U1" H 6050 2800 50  0000 C CNN
+F 1 "NE555P" H 6150 2700 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 7050 1950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 7250 1950 50  0001 C CNN
+	1    6400 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U?
+U 1 1 621E6CDA
+P 6000 4100
+AR Path="/621E6CDA" Ref="U?"  Part="1" 
+AR Path="/6217B0F3/621E6CDA" Ref="U3"  Part="1" 
+F 0 "U3" H 6000 4425 50  0000 C CNN
+F 1 "74HC00" H 6000 4334 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 6000 4100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 6000 4100 50  0001 C CNN
+	1    6000 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U?
+U 2 1 621E6CE0
+P 7050 4100
+AR Path="/621E6CE0" Ref="U?"  Part="2" 
+AR Path="/6217B0F3/621E6CE0" Ref="U3"  Part="2" 
+F 0 "U3" H 7050 4425 50  0000 C CNN
+F 1 "74HC00" H 7050 4334 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 7050 4100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 7050 4100 50  0001 C CNN
+	2    7050 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U?
+U 3 1 621E6CE6
+P 4650 4050
+AR Path="/621E6CE6" Ref="U?"  Part="3" 
+AR Path="/6217B0F3/621E6CE6" Ref="U3"  Part="3" 
+F 0 "U3" H 4650 4375 50  0000 C CNN
+F 1 "74HC00" H 4650 4284 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 4650 4050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 4650 4050 50  0001 C CNN
+	3    4650 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U?
+U 4 1 621E6CEC
+P 4650 4600
+AR Path="/621E6CEC" Ref="U?"  Part="4" 
+AR Path="/6217B0F3/621E6CEC" Ref="U3"  Part="4" 
+F 0 "U3" H 4650 4925 50  0000 C CNN
+F 1 "74HC00" H 4650 4834 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 4650 4600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 4650 4600 50  0001 C CNN
+	4    4650 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U?
+U 5 1 621E6CF2
+P 3600 4300
+AR Path="/621E6CF2" Ref="U?"  Part="5" 
+AR Path="/6217B0F3/621E6CF2" Ref="U3"  Part="5" 
+F 0 "U3" H 3830 4346 50  0000 L CNN
+F 1 "74HC00" H 3830 4255 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 3600 4300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 3600 4300 50  0001 C CNN
+	5    3600 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:+5V-power-MAX7000CPU-Gen2-rescue #PWR011
+U 1 1 621FC9AC
+P 3600 3800
+F 0 "#PWR011" H 3600 3650 50  0001 C CNN
+F 1 "+5V" H 3615 3973 50  0000 C CNN
+F 2 "" H 3600 3800 50  0001 C CNN
+F 3 "" H 3600 3800 50  0001 C CNN
+	1    3600 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR012
+U 1 1 621FFA7E
+P 3600 4800
+F 0 "#PWR012" H 3600 4550 50  0001 C CNN
+F 1 "GND" H 3605 4627 50  0000 C CNN
+F 2 "" H 3600 4800 50  0001 C CNN
+F 3 "" H 3600 4800 50  0001 C CNN
+	1    3600 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 62216570
+P 6000 3600
+F 0 "R5" V 5793 3600 50  0000 C CNN
+F 1 "1M" V 5884 3600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5930 3600 50  0001 C CNN
+F 3 "~" H 6000 3600 50  0001 C CNN
+	1    6000 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 6221A739
+P 6300 4400
+F 0 "R6" H 6450 4450 50  0000 C CNN
+F 1 "4.7K" H 6500 4350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6230 4400 50  0001 C CNN
+F 3 "~" H 6300 4400 50  0001 C CNN
+	1    6300 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal Y1
+U 1 1 6221E132
+P 6000 4700
+F 0 "Y1" H 6000 4968 50  0000 C CNN
+F 1 "Crystal" H 6000 4877 50  0000 C CNN
+F 2 "Crystal:Crystal_HC49-U_Vertical" H 6000 4700 50  0001 C CNN
+F 3 "~" H 6000 4700 50  0001 C CNN
+	1    6000 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C78
+U 1 1 6221F2D0
+P 6300 4850
+F 0 "C78" H 6415 4896 50  0000 L CNN
+F 1 "33p" H 6415 4805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 6338 4700 50  0001 C CNN
+F 3 "~" H 6300 4850 50  0001 C CNN
+	1    6300 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4550 6300 4700
+Wire Wire Line
+	6150 4700 6300 4700
+Connection ~ 6300 4700
+Wire Wire Line
+	6300 4100 6300 4250
+Wire Wire Line
+	5850 4700 5700 4700
+Wire Wire Line
+	5700 3600 5850 3600
+Wire Wire Line
+	5700 3600 5700 4000
+Connection ~ 5700 4000
+Wire Wire Line
+	5700 4000 5700 4200
+Connection ~ 5700 4200
+Wire Wire Line
+	5700 4200 5700 4700
+Wire Wire Line
+	6150 3600 6300 3600
+Wire Wire Line
+	6300 3600 6300 4100
+Connection ~ 6300 4100
+$Comp
+L Device:C C77
+U 1 1 622294ED
+P 5700 4850
+F 0 "C77" H 5815 4896 50  0000 L CNN
+F 1 "33p" H 5815 4805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5738 4700 50  0001 C CNN
+F 3 "~" H 5700 4850 50  0001 C CNN
+	1    5700 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR014
+U 1 1 6222C351
+P 5700 5000
+F 0 "#PWR014" H 5700 4750 50  0001 C CNN
+F 1 "GND" H 5705 4827 50  0000 C CNN
+F 2 "" H 5700 5000 50  0001 C CNN
+F 3 "" H 5700 5000 50  0001 C CNN
+	1    5700 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR015
+U 1 1 6222DEE9
+P 6300 5000
+F 0 "#PWR015" H 6300 4750 50  0001 C CNN
+F 1 "GND" H 6305 4827 50  0000 C CNN
+F 2 "" H 6300 5000 50  0001 C CNN
+F 3 "" H 6300 5000 50  0001 C CNN
+	1    6300 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4100 6750 4100
+Wire Wire Line
+	6750 4100 6750 4000
+Wire Wire Line
+	6750 4200 6750 4100
+Connection ~ 6750 4100
+NoConn ~ 4950 4050
+NoConn ~ 4950 4600
+Wire Wire Line
+	4350 3950 4350 4150
+Connection ~ 4350 4150
+Wire Wire Line
+	4350 4150 4350 4500
+Connection ~ 4350 4500
+Wire Wire Line
+	4350 4500 4350 4700
+Connection ~ 4350 4700
+Wire Wire Line
+	4350 4700 4350 4800
+$Comp
+L power:GND #PWR013
+U 1 1 62254B2D
+P 4350 4800
+F 0 "#PWR013" H 4350 4550 50  0001 C CNN
+F 1 "GND" H 4355 4627 50  0000 C CNN
+F 2 "" H 4350 4800 50  0001 C CNN
+F 3 "" H 4350 4800 50  0001 C CNN
+	1    4350 4800
+	1    0    0    -1  
+$EndComp
+Text GLabel 7350 4100 2    50   Input ~ 0
+FastCLK
+Connection ~ 5700 4700
+$EndSCHEMATC

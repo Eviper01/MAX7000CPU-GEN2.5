@@ -1,0 +1,1872 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 9
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	1950 2850 2000 2850
+Text GLabel 2000 2850 2    50   Input ~ 0
+JumpRegLoad
+Wire Wire Line
+	1950 2400 1950 2850
+$Comp
+L MAX7000CPU-Gen2_5-rescue:+5V-power-MAX7000CPU-Gen2-rescue #PWR019
+U 1 1 62320913
+P 2600 1200
+F 0 "#PWR019" H 2600 1050 50  0001 C CNN
+F 1 "+5V" H 2615 1373 50  0000 C CNN
+F 2 "" H 2600 1200 50  0001 C CNN
+F 3 "" H 2600 1200 50  0001 C CNN
+	1    2600 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:74LS573-74xx-MAX7000CPU-Gen2-rescue U7
+U 1 1 62320919
+P 2600 2000
+F 0 "U7" H 2350 2750 50  0000 C CNN
+F 1 "74LS574" H 2350 2650 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 2600 2000 50  0001 C CNN
+F 3 "74xx/74hc573.pdf" H 2600 2000 50  0001 C CNN
+	1    2600 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR026
+U 1 1 62320925
+P 5850 2800
+F 0 "#PWR026" H 5850 2550 50  0001 C CNN
+F 1 "GND" H 5750 2800 50  0000 C CNN
+F 2 "" H 5850 2800 50  0001 C CNN
+F 3 "" H 5850 2800 50  0001 C CNN
+	1    5850 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:+5V-power-MAX7000CPU-Gen2-rescue #PWR021
+U 1 1 6232092B
+P 5850 1200
+F 0 "#PWR021" H 5850 1050 50  0001 C CNN
+F 1 "+5V" H 5865 1373 50  0000 C CNN
+F 2 "" H 5850 1200 50  0001 C CNN
+F 3 "" H 5850 1200 50  0001 C CNN
+	1    5850 1200
+	1    0    0    -1  
+$EndComp
+Text Notes 5950 5350 0    50   ~ 0
+Counter Module
+Text Label 2100 1500 2    50   ~ 0
+B0
+Text Label 2100 1600 2    50   ~ 0
+B1
+Text Label 2100 1700 2    50   ~ 0
+B2
+Text Label 2100 1800 2    50   ~ 0
+B3
+Text Label 2100 1900 2    50   ~ 0
+B4
+Text Label 2100 2000 2    50   ~ 0
+B5
+Text Label 2100 2100 2    50   ~ 0
+B6
+Text Label 2100 2200 2    50   ~ 0
+B7
+Wire Wire Line
+	5350 2400 5300 2400
+Wire Wire Line
+	5300 2400 5300 2500
+Wire Wire Line
+	5350 2500 5300 2500
+Text GLabel 5350 2950 2    50   Input ~ 0
+CounterOutControl
+$Comp
+L MAX7000CPU-Gen2_5-rescue:CD4029BEE4-CPU_ics U4
+U 1 1 6232094C
+P 3450 1300
+F 0 "U4" H 3650 1500 50  0000 C CNN
+F 1 "CD4029BEE4" H 3850 1400 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 5300 1400 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4029b.pdf" H 5300 1300 50  0001 L CNN
+F 4 "CD4029BEE4, 4-stage Decade and Binary Counter Up/Down Counter, Bi-Directional, 3  18 V, 16-Pin PDIP" H 5300 1200 50  0001 L CNN "Description"
+F 5 "5.08" H 5300 1100 50  0001 L CNN "Height"
+F 6 "595-CD4029BEE4" H 5300 1000 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD4029BEE4?qs=LU5rZWrBGo0epKDtktqo2w%3D%3D" H 5300 900 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 5300 800 50  0001 L CNN "Manufacturer_Name"
+F 9 "CD4029BEE4" H 5300 700 50  0001 L CNN "Manufacturer_Part_Number"
+	1    3450 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 1500 5350 1500
+Wire Wire Line
+	4900 1600 5350 1600
+Wire Wire Line
+	4900 1700 5350 1700
+Wire Wire Line
+	4900 1800 5350 1800
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR022
+U 1 1 62320956
+P 3450 2000
+F 0 "#PWR022" H 3450 1750 50  0001 C CNN
+F 1 "GND" H 3455 1827 50  0000 C CNN
+F 2 "" H 3450 2000 50  0001 C CNN
+F 3 "" H 3450 2000 50  0001 C CNN
+	1    3450 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:+5V-power-MAX7000CPU-Gen2-rescue #PWR020
+U 1 1 6232095C
+P 4900 1200
+F 0 "#PWR020" H 4900 1050 50  0001 C CNN
+F 1 "+5V" H 4915 1373 50  0000 C CNN
+F 2 "" H 4900 1200 50  0001 C CNN
+F 3 "" H 4900 1200 50  0001 C CNN
+	1    4900 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 1300 4900 1200
+Wire Wire Line
+	4900 1900 4950 1900
+Wire Wire Line
+	3450 1900 3400 1900
+Wire Wire Line
+	4900 1150 4900 1200
+Connection ~ 4900 1200
+$Comp
+L MAX7000CPU-Gen2_5-rescue:CD4029BEE4-CPU_ics U9
+U 1 1 6232096D
+P 3450 2350
+F 0 "U9" H 3650 2550 50  0000 C CNN
+F 1 "CD4029BEE4" H 3850 2450 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 5300 2450 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4029b.pdf" H 5300 2350 50  0001 L CNN
+F 4 "CD4029BEE4, 4-stage Decade and Binary Counter Up/Down Counter, Bi-Directional, 3  18 V, 16-Pin PDIP" H 5300 2250 50  0001 L CNN "Description"
+F 5 "5.08" H 5300 2150 50  0001 L CNN "Height"
+F 6 "595-CD4029BEE4" H 5300 2050 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD4029BEE4?qs=LU5rZWrBGo0epKDtktqo2w%3D%3D" H 5300 1950 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 5300 1850 50  0001 L CNN "Manufacturer_Name"
+F 9 "CD4029BEE4" H 5300 1750 50  0001 L CNN "Manufacturer_Part_Number"
+	1    3450 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 2000 5000 2000
+Wire Wire Line
+	5000 2000 5000 2450
+Wire Wire Line
+	5000 2450 4900 2450
+Wire Wire Line
+	4900 2950 4950 2950
+Wire Wire Line
+	3450 2950 3400 2950
+Wire Wire Line
+	4900 2550 5050 2550
+Wire Wire Line
+	5050 2550 5050 1900
+Wire Wire Line
+	5050 1900 5350 1900
+Wire Wire Line
+	4900 2650 5100 2650
+Wire Wire Line
+	5100 2650 5100 2000
+Wire Wire Line
+	5100 2000 5350 2000
+Wire Wire Line
+	4900 2750 5150 2750
+Wire Wire Line
+	5150 2750 5150 2100
+Wire Wire Line
+	5150 2100 5350 2100
+Wire Wire Line
+	4900 2850 5200 2850
+Wire Wire Line
+	5200 2850 5200 2200
+Wire Wire Line
+	5200 2200 5350 2200
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR030
+U 1 1 62320984
+P 3450 3050
+F 0 "#PWR030" H 3450 2800 50  0001 C CNN
+F 1 "GND" H 3350 3050 50  0000 C CNN
+F 2 "" H 3450 3050 50  0001 C CNN
+F 3 "" H 3450 3050 50  0001 C CNN
+	1    3450 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2850 3100 2200
+Wire Wire Line
+	3150 2100 3150 2750
+Wire Wire Line
+	3450 2450 3350 2450
+Wire Wire Line
+	3350 2450 3350 1400
+Wire Wire Line
+	3350 1400 3450 1400
+Wire Wire Line
+	3100 1900 3250 1900
+Wire Wire Line
+	3250 2550 3450 2550
+Wire Wire Line
+	3200 2650 3450 2650
+Wire Wire Line
+	3150 2750 3450 2750
+Wire Wire Line
+	3100 2850 3450 2850
+Wire Wire Line
+	3200 2000 3200 2650
+Wire Wire Line
+	3150 2100 3100 2100
+Wire Wire Line
+	3250 1900 3250 2550
+Wire Wire Line
+	3200 2000 3100 2000
+Wire Wire Line
+	3100 1500 3450 1500
+Wire Wire Line
+	3100 1600 3450 1600
+Wire Wire Line
+	3100 1700 3450 1700
+Wire Wire Line
+	3100 1800 3450 1800
+Wire Wire Line
+	3450 2350 3300 2350
+Wire Wire Line
+	3300 2350 3300 1300
+Wire Wire Line
+	3300 1300 3450 1300
+Wire Wire Line
+	5300 2500 5300 2950
+Wire Wire Line
+	5300 2950 5350 2950
+Connection ~ 5300 2500
+Text GLabel 3250 1050 0    50   Input ~ 0
+Count
+Text GLabel 3250 1150 0    50   Input ~ 0
+JumpEnable
+Wire Wire Line
+	3300 1300 3300 1150
+Wire Wire Line
+	3300 1150 3250 1150
+Connection ~ 3300 1300
+Wire Wire Line
+	3350 1400 3350 1050
+Wire Wire Line
+	3350 1050 3250 1050
+Connection ~ 3350 1400
+Wire Wire Line
+	1950 2400 2100 2400
+Wire Wire Line
+	2600 2800 2600 2900
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR027
+U 1 1 623209AC
+P 2600 2950
+F 0 "#PWR027" H 2600 2700 50  0001 C CNN
+F 1 "GND" H 2500 2950 50  0000 C CNN
+F 2 "" H 2600 2950 50  0001 C CNN
+F 3 "" H 2600 2950 50  0001 C CNN
+	1    2600 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 5050 1950 5050
+Text GLabel 1950 5050 2    50   Input ~ 0
+JumpRegLoad
+Wire Wire Line
+	1900 4600 1900 5050
+$Comp
+L MAX7000CPU-Gen2_5-rescue:+5V-power-MAX7000CPU-Gen2-rescue #PWR032
+U 1 1 623209B5
+P 2550 3400
+F 0 "#PWR032" H 2550 3250 50  0001 C CNN
+F 1 "+5V" H 2565 3573 50  0000 C CNN
+F 2 "" H 2550 3400 50  0001 C CNN
+F 3 "" H 2550 3400 50  0001 C CNN
+	1    2550 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR039
+U 1 1 623209BB
+P 5800 5000
+F 0 "#PWR039" H 5800 4750 50  0001 C CNN
+F 1 "GND" H 5700 5000 50  0000 C CNN
+F 2 "" H 5800 5000 50  0001 C CNN
+F 3 "" H 5800 5000 50  0001 C CNN
+	1    5800 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:+5V-power-MAX7000CPU-Gen2-rescue #PWR034
+U 1 1 623209C1
+P 5800 3400
+F 0 "#PWR034" H 5800 3250 50  0001 C CNN
+F 1 "+5V" H 5815 3573 50  0000 C CNN
+F 2 "" H 5800 3400 50  0001 C CNN
+F 3 "" H 5800 3400 50  0001 C CNN
+	1    5800 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 4600 5250 4600
+Wire Wire Line
+	5250 4600 5250 4700
+Wire Wire Line
+	5300 4700 5250 4700
+Text GLabel 5500 5150 2    50   Input ~ 0
+CounterOutControl
+$Comp
+L MAX7000CPU-Gen2_5-rescue:CD4029BEE4-CPU_ics U10
+U 1 1 623209E1
+P 3400 3500
+F 0 "U10" H 3600 3700 50  0000 C CNN
+F 1 "CD4029BEE4" H 3800 3600 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 5250 3600 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4029b.pdf" H 5250 3500 50  0001 L CNN
+F 4 "CD4029BEE4, 4-stage Decade and Binary Counter Up/Down Counter, Bi-Directional, 3  18 V, 16-Pin PDIP" H 5250 3400 50  0001 L CNN "Description"
+F 5 "5.08" H 5250 3300 50  0001 L CNN "Height"
+F 6 "595-CD4029BEE4" H 5250 3200 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD4029BEE4?qs=LU5rZWrBGo0epKDtktqo2w%3D%3D" H 5250 3100 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 5250 3000 50  0001 L CNN "Manufacturer_Name"
+F 9 "CD4029BEE4" H 5250 2900 50  0001 L CNN "Manufacturer_Part_Number"
+	1    3400 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3700 5300 3700
+Wire Wire Line
+	4850 3800 5300 3800
+Wire Wire Line
+	4850 3900 5300 3900
+Wire Wire Line
+	4850 4000 5300 4000
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR035
+U 1 1 623209EB
+P 3400 4200
+F 0 "#PWR035" H 3400 3950 50  0001 C CNN
+F 1 "GND" H 3405 4027 50  0000 C CNN
+F 2 "" H 3400 4200 50  0001 C CNN
+F 3 "" H 3400 4200 50  0001 C CNN
+	1    3400 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:+5V-power-MAX7000CPU-Gen2-rescue #PWR033
+U 1 1 623209F1
+P 4850 3400
+F 0 "#PWR033" H 4850 3250 50  0001 C CNN
+F 1 "+5V" H 4865 3573 50  0000 C CNN
+F 2 "" H 4850 3400 50  0001 C CNN
+F 3 "" H 4850 3400 50  0001 C CNN
+	1    4850 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3500 4850 3400
+Wire Wire Line
+	4850 4100 4900 4100
+Wire Wire Line
+	4900 4100 4900 3500
+Wire Wire Line
+	3400 4100 3350 4100
+$Comp
+L MAX7000CPU-Gen2_5-rescue:CD4029BEE4-CPU_ics U15
+U 1 1 62320A03
+P 3400 4550
+F 0 "U15" H 3600 4750 50  0000 C CNN
+F 1 "CD4029BEE4" H 3800 4650 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 5250 4650 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4029b.pdf" H 5250 4550 50  0001 L CNN
+F 4 "CD4029BEE4, 4-stage Decade and Binary Counter Up/Down Counter, Bi-Directional, 3  18 V, 16-Pin PDIP" H 5250 4450 50  0001 L CNN "Description"
+F 5 "5.08" H 5250 4350 50  0001 L CNN "Height"
+F 6 "595-CD4029BEE4" H 5250 4250 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD4029BEE4?qs=LU5rZWrBGo0epKDtktqo2w%3D%3D" H 5250 4150 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 5250 4050 50  0001 L CNN "Manufacturer_Name"
+F 9 "CD4029BEE4" H 5250 3950 50  0001 L CNN "Manufacturer_Part_Number"
+	1    3400 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 4200 4950 4200
+Wire Wire Line
+	4950 4200 4950 4650
+Wire Wire Line
+	4950 4650 4850 4650
+Connection ~ 4900 4100
+Wire Wire Line
+	4850 5150 4900 5150
+Wire Wire Line
+	3400 5150 3350 5150
+Wire Wire Line
+	4850 4750 5000 4750
+Wire Wire Line
+	5000 4100 5300 4100
+Wire Wire Line
+	4850 4850 5050 4850
+Wire Wire Line
+	5050 4850 5050 4200
+Wire Wire Line
+	5050 4200 5300 4200
+Wire Wire Line
+	4850 4950 5100 4950
+Wire Wire Line
+	5100 4950 5100 4300
+Wire Wire Line
+	5100 4300 5300 4300
+Wire Wire Line
+	4850 5050 5150 5050
+Wire Wire Line
+	5150 5050 5150 4400
+Wire Wire Line
+	5150 4400 5300 4400
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR041
+U 1 1 62320A1A
+P 3400 5250
+F 0 "#PWR041" H 3400 5000 50  0001 C CNN
+F 1 "GND" H 3300 5250 50  0000 C CNN
+F 2 "" H 3400 5250 50  0001 C CNN
+F 3 "" H 3400 5250 50  0001 C CNN
+	1    3400 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 5050 3050 4400
+Wire Wire Line
+	3400 4650 3300 4650
+Wire Wire Line
+	3300 4650 3300 3600
+Wire Wire Line
+	3300 3600 3400 3600
+Wire Wire Line
+	3200 4750 3400 4750
+Wire Wire Line
+	3150 4850 3400 4850
+Wire Wire Line
+	3100 4950 3400 4950
+Wire Wire Line
+	3050 5050 3400 5050
+Wire Wire Line
+	3150 4200 3150 4850
+Wire Wire Line
+	3100 4300 3050 4300
+Wire Wire Line
+	3200 4100 3200 4750
+Wire Wire Line
+	3400 4550 3250 4550
+Wire Wire Line
+	3250 4550 3250 3500
+Wire Wire Line
+	3250 3500 3400 3500
+Wire Wire Line
+	5250 4700 5250 5050
+Connection ~ 5250 4700
+Text GLabel 3200 3250 0    50   Input ~ 0
+Count
+Text GLabel 3200 3350 0    50   Input ~ 0
+JumpEnable
+Wire Wire Line
+	3250 3500 3250 3350
+Wire Wire Line
+	3250 3350 3200 3350
+Connection ~ 3250 3500
+Wire Wire Line
+	3300 3600 3300 3250
+Wire Wire Line
+	3300 3250 3200 3250
+Connection ~ 3300 3600
+Wire Wire Line
+	1900 4600 2050 4600
+Wire Wire Line
+	2550 5000 2550 5100
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR042
+U 1 1 62320A3A
+P 5250 5350
+F 0 "#PWR042" H 5250 5100 50  0001 C CNN
+F 1 "GND" H 5150 5350 50  0000 C CNN
+F 2 "" H 5250 5350 50  0001 C CNN
+F 3 "" H 5250 5350 50  0001 C CNN
+	1    5250 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 3050 4950 3050
+Wire Wire Line
+	4950 3050 4950 3600
+Wire Wire Line
+	4950 3600 4850 3600
+Wire Wire Line
+	4900 1400 5050 1400
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR018
+U 1 1 62320A44
+P 5350 1150
+F 0 "#PWR018" H 5350 900 50  0001 C CNN
+F 1 "GND" H 5450 1150 50  0000 C CNN
+F 2 "" H 5350 1150 50  0001 C CNN
+F 3 "" H 5350 1150 50  0001 C CNN
+	1    5350 1150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4850 5250
+Wire Wire Line
+	5000 4750 5000 4100
+$Comp
+L MAX7000CPU-Gen2_5-rescue:+5V-power-MAX7000CPU-Gen2-rescue #PWR031
+U 1 1 62320A53
+P 5300 3250
+F 0 "#PWR031" H 5300 3100 50  0001 C CNN
+F 1 "+5V" V 5300 3400 50  0000 L CNN
+F 2 "" H 5300 3250 50  0001 C CNN
+F 3 "" H 5300 3250 50  0001 C CNN
+	1    5300 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R14
+U 1 1 62320A59
+P 5250 5200
+F 0 "R14" H 5100 5250 50  0000 L CNN
+F 1 "50K" H 5050 5150 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5180 5200 50  0001 C CNN
+F 3 "~" H 5250 5200 50  0001 C CNN
+	1    5250 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 5050 5500 5050
+Wire Wire Line
+	5500 5050 5500 5150
+Connection ~ 5250 5050
+Wire Wire Line
+	2050 5000 2050 5100
+Wire Wire Line
+	2050 5100 2550 5100
+Connection ~ 2550 5100
+Wire Wire Line
+	2550 5100 2550 5150
+Wire Wire Line
+	3150 4200 3050 4200
+Wire Wire Line
+	3050 4100 3200 4100
+Wire Wire Line
+	3050 4000 3400 4000
+Wire Wire Line
+	3050 3900 3400 3900
+Wire Wire Line
+	3050 3800 3400 3800
+Wire Wire Line
+	3050 3700 3400 3700
+Wire Wire Line
+	3100 4300 3100 4950
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R13
+U 1 1 62320A73
+P 2050 4850
+F 0 "R13" H 2120 4896 50  0000 L CNN
+F 1 "50K" H 2120 4805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1980 4850 50  0001 C CNN
+F 3 "~" H 2050 4850 50  0001 C CNN
+	1    2050 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:74LS573-74xx-MAX7000CPU-Gen2-rescue U13
+U 1 1 62320A79
+P 2550 4200
+F 0 "U13" H 2300 4950 50  0000 C CNN
+F 1 "74LS574" H 2300 4850 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 2550 4200 50  0001 C CNN
+F 3 "74xx/74hc573.pdf" H 2550 4200 50  0001 C CNN
+	1    2550 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R11
+U 1 1 62320A7F
+P 2100 2650
+F 0 "R11" H 1950 2700 50  0000 L CNN
+F 1 "50K" H 1900 2600 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2030 2650 50  0001 C CNN
+F 3 "~" H 2100 2650 50  0001 C CNN
+	1    2100 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 2800 2100 2900
+Wire Wire Line
+	2100 2900 2600 2900
+Connection ~ 2600 2900
+Wire Wire Line
+	2600 2900 2600 2950
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R8
+U 1 1 62320A89
+P 5200 1150
+F 0 "R8" V 5300 1150 50  0000 L CNN
+F 1 "50K" V 5100 1100 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5130 1150 50  0001 C CNN
+F 3 "~" H 5200 1150 50  0001 C CNN
+	1    5200 1150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5050 1150 5050 1400
+Wire Wire Line
+	3400 1900 3400 2950
+Connection ~ 3400 1900
+Wire Wire Line
+	3350 2950 3400 2950
+Wire Wire Line
+	3350 2950 3350 4100
+Connection ~ 3400 2950
+Wire Wire Line
+	3350 4100 3350 5150
+Connection ~ 3350 4100
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R7
+U 1 1 62320A97
+P 4150 1100
+F 0 "R7" V 4250 1200 50  0000 L CNN
+F 1 "50K" V 4250 950 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4080 1100 50  0001 C CNN
+F 3 "~" H 4150 1100 50  0001 C CNN
+	1    4150 1100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3400 1100 4000 1100
+Wire Wire Line
+	3400 1100 3400 1900
+Wire Wire Line
+	4300 1100 4600 1100
+Wire Wire Line
+	4600 1100 4600 1150
+Wire Wire Line
+	4600 1150 4900 1150
+Wire Wire Line
+	4950 1900 4950 2950
+Wire Wire Line
+	4900 4100 4900 5150
+$Comp
+L MAX7000CPU-Gen2_5-rescue:+5V-power-MAX7000CPU-Gen2-rescue #PWR036
+U 1 1 62320AA4
+P 4850 4550
+F 0 "#PWR036" H 4850 4400 50  0001 C CNN
+F 1 "+5V" H 4865 4723 50  0000 C CNN
+F 2 "" H 4850 4550 50  0001 C CNN
+F 3 "" H 4850 4550 50  0001 C CNN
+	1    4850 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:+5V-power-MAX7000CPU-Gen2-rescue #PWR023
+U 1 1 62320AAA
+P 4900 2350
+F 0 "#PWR023" H 4900 2200 50  0001 C CNN
+F 1 "+5V" H 4915 2523 50  0000 C CNN
+F 2 "" H 4900 2350 50  0001 C CNN
+F 3 "" H 4900 2350 50  0001 C CNN
+	1    4900 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 2950 5000 2950
+Wire Wire Line
+	5000 2950 5000 3400
+Wire Wire Line
+	5000 3500 4900 3500
+Connection ~ 4950 2950
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R12
+U 1 1 62320AB4
+P 5150 3400
+F 0 "R12" V 5250 3350 50  0000 L CNN
+F 1 "50K" V 5050 3350 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5080 3400 50  0001 C CNN
+F 3 "~" H 5150 3400 50  0001 C CNN
+	1    5150 3400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5300 3400 5300 3250
+Connection ~ 5000 3400
+Wire Wire Line
+	5000 3400 5000 3500
+Wire Notes Line
+	1850 950  6650 950 
+Wire Notes Line
+	1850 5500 6650 5500
+Wire Notes Line
+	1850 950  1850 5500
+Wire Notes Line
+	6650 950  6650 5500
+Text Label 2050 3700 2    50   ~ 0
+B8
+Text Label 2050 3800 2    50   ~ 0
+B9
+Text Label 2050 3900 2    50   ~ 0
+B10
+Text Label 2050 4000 2    50   ~ 0
+B11
+Text Label 2050 4100 2    50   ~ 0
+B12
+Text Label 2050 4200 2    50   ~ 0
+B13
+Text Label 2050 4300 2    50   ~ 0
+B14
+Text Label 2050 4400 2    50   ~ 0
+B15
+$Comp
+L 74xx:74LS541 U?
+U 1 1 6212824F
+P 5850 2000
+AR Path="/6212824F" Ref="U?"  Part="1" 
+AR Path="/622D361F/6212824F" Ref="U8"  Part="1" 
+F 0 "U8" H 5500 2750 50  0000 C CNN
+F 1 "74LS541" H 5600 2650 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 5850 2000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS541" H 5850 2000 50  0001 C CNN
+	1    5850 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS541 U?
+U 1 1 62137311
+P 5800 4200
+AR Path="/62137311" Ref="U?"  Part="1" 
+AR Path="/622D361F/62137311" Ref="U14"  Part="1" 
+F 0 "U14" H 5450 4950 50  0000 C CNN
+F 1 "74LS541" H 5550 4850 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 5800 4200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS541" H 5800 4200 50  0001 C CNN
+	1    5800 4200
+	1    0    0    -1  
+$EndComp
+Text Label 6350 1500 0    50   ~ 0
+RA0
+Text Label 6350 1600 0    50   ~ 0
+RA1
+Text Label 6350 1700 0    50   ~ 0
+RA2
+Text Label 6350 1800 0    50   ~ 0
+RA3
+Text Label 6350 1900 0    50   ~ 0
+RA4
+Text Label 6350 2000 0    50   ~ 0
+RA5
+Text Label 6350 2100 0    50   ~ 0
+RA6
+Text Label 6350 2200 0    50   ~ 0
+RA7
+Text Label 6300 3700 0    50   ~ 0
+RA8
+Text Label 6300 3800 0    50   ~ 0
+RA9
+Text Label 6300 3900 0    50   ~ 0
+RA10
+Text Label 6300 4000 0    50   ~ 0
+RA11
+Text Label 6300 4100 0    50   ~ 0
+RA12
+Text Label 6300 4200 0    50   ~ 0
+RA13
+Text Label 6300 4300 0    50   ~ 0
+RA14
+Text Label 6300 4400 0    50   ~ 0
+RA15
+Text Label 3100 1500 0    50   ~ 0
+JB0
+Text Label 3100 1600 0    50   ~ 0
+JB1
+Text Label 3100 1700 0    50   ~ 0
+JB2
+Text Label 3100 1800 0    50   ~ 0
+JB3
+Text Label 3100 1900 0    50   ~ 0
+JB4
+Text Label 3100 2000 0    50   ~ 0
+JB5
+Text Label 3100 2100 0    50   ~ 0
+JB6
+Text Label 3100 2200 0    50   ~ 0
+JB7
+Text Label 3050 3700 0    50   ~ 0
+JB8
+Text Label 3050 3800 0    50   ~ 0
+JB9
+Text Label 3050 3900 0    50   ~ 0
+JB10
+Text Label 3050 4000 0    50   ~ 0
+JB11
+Text Label 3050 4100 0    50   ~ 0
+JB12
+Text Label 3050 4200 0    50   ~ 0
+JB13
+Text Label 3050 4300 0    50   ~ 0
+JB14
+Text Label 3050 4400 0    50   ~ 0
+JB15
+$Comp
+L power:+5V #PWR?
+U 1 1 62684619
+P 8000 950
+AR Path="/62684619" Ref="#PWR?"  Part="1" 
+AR Path="/627DD6B0/62684619" Ref="#PWR?"  Part="1" 
+AR Path="/622D361F/62684619" Ref="#PWR016"  Part="1" 
+F 0 "#PWR016" H 8000 800 50  0001 C CNN
+F 1 "+5V" H 8015 1123 50  0000 C CNN
+F 2 "" H 8000 950 50  0001 C CNN
+F 3 "" H 8000 950 50  0001 C CNN
+	1    8000 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6268461F
+P 8000 2550
+AR Path="/6268461F" Ref="#PWR?"  Part="1" 
+AR Path="/627DD6B0/6268461F" Ref="#PWR?"  Part="1" 
+AR Path="/622D361F/6268461F" Ref="#PWR024"  Part="1" 
+F 0 "#PWR024" H 8000 2300 50  0001 C CNN
+F 1 "GND" H 8005 2377 50  0000 C CNN
+F 2 "" H 8000 2550 50  0001 C CNN
+F 3 "" H 8000 2550 50  0001 C CNN
+	1    8000 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 2150 7500 2250
+$Comp
+L 74xx:74LS541 U?
+U 1 1 62684626
+P 8000 1750
+AR Path="/62684626" Ref="U?"  Part="1" 
+AR Path="/627DD6B0/62684626" Ref="U?"  Part="1" 
+AR Path="/622D361F/62684626" Ref="U5"  Part="1" 
+F 0 "U5" H 7650 2500 50  0000 C CNN
+F 1 "74LS541" H 7750 2400 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 8000 1750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS541" H 8000 1750 50  0001 C CNN
+	1    8000 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6268462C
+P 8000 3000
+AR Path="/6268462C" Ref="#PWR?"  Part="1" 
+AR Path="/627DD6B0/6268462C" Ref="#PWR?"  Part="1" 
+AR Path="/622D361F/6268462C" Ref="#PWR028"  Part="1" 
+F 0 "#PWR028" H 8000 2850 50  0001 C CNN
+F 1 "+5V" H 8015 3173 50  0000 C CNN
+F 2 "" H 8000 3000 50  0001 C CNN
+F 3 "" H 8000 3000 50  0001 C CNN
+	1    8000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62684632
+P 8000 4600
+AR Path="/62684632" Ref="#PWR?"  Part="1" 
+AR Path="/627DD6B0/62684632" Ref="#PWR?"  Part="1" 
+AR Path="/622D361F/62684632" Ref="#PWR037"  Part="1" 
+F 0 "#PWR037" H 8000 4350 50  0001 C CNN
+F 1 "GND" H 8005 4427 50  0000 C CNN
+F 2 "" H 8000 4600 50  0001 C CNN
+F 3 "" H 8000 4600 50  0001 C CNN
+	1    8000 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 4200 7500 4300
+$Comp
+L 74xx:74LS541 U?
+U 1 1 62684639
+P 8000 3800
+AR Path="/62684639" Ref="U?"  Part="1" 
+AR Path="/627DD6B0/62684639" Ref="U?"  Part="1" 
+AR Path="/622D361F/62684639" Ref="U11"  Part="1" 
+F 0 "U11" H 7650 4550 50  0000 C CNN
+F 1 "74LS541" H 7750 4450 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 8000 3800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS541" H 8000 3800 50  0001 C CNN
+	1    8000 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6268463F
+P 9500 950
+AR Path="/6268463F" Ref="#PWR?"  Part="1" 
+AR Path="/627DD6B0/6268463F" Ref="#PWR?"  Part="1" 
+AR Path="/622D361F/6268463F" Ref="#PWR017"  Part="1" 
+F 0 "#PWR017" H 9500 800 50  0001 C CNN
+F 1 "+5V" H 9515 1123 50  0000 C CNN
+F 2 "" H 9500 950 50  0001 C CNN
+F 3 "" H 9500 950 50  0001 C CNN
+	1    9500 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62684645
+P 9500 2550
+AR Path="/62684645" Ref="#PWR?"  Part="1" 
+AR Path="/627DD6B0/62684645" Ref="#PWR?"  Part="1" 
+AR Path="/622D361F/62684645" Ref="#PWR025"  Part="1" 
+F 0 "#PWR025" H 9500 2300 50  0001 C CNN
+F 1 "GND" H 9505 2377 50  0000 C CNN
+F 2 "" H 9500 2550 50  0001 C CNN
+F 3 "" H 9500 2550 50  0001 C CNN
+	1    9500 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 2150 9000 2250
+$Comp
+L 74xx:74LS541 U?
+U 1 1 6268464C
+P 9500 1750
+AR Path="/6268464C" Ref="U?"  Part="1" 
+AR Path="/627DD6B0/6268464C" Ref="U?"  Part="1" 
+AR Path="/622D361F/6268464C" Ref="U6"  Part="1" 
+F 0 "U6" H 9150 2500 50  0000 C CNN
+F 1 "74LS541" H 9250 2400 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 9500 1750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS541" H 9500 1750 50  0001 C CNN
+	1    9500 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 62684652
+P 9500 3000
+AR Path="/62684652" Ref="#PWR?"  Part="1" 
+AR Path="/627DD6B0/62684652" Ref="#PWR?"  Part="1" 
+AR Path="/622D361F/62684652" Ref="#PWR029"  Part="1" 
+F 0 "#PWR029" H 9500 2850 50  0001 C CNN
+F 1 "+5V" H 9515 3173 50  0000 C CNN
+F 2 "" H 9500 3000 50  0001 C CNN
+F 3 "" H 9500 3000 50  0001 C CNN
+	1    9500 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62684658
+P 9500 4600
+AR Path="/62684658" Ref="#PWR?"  Part="1" 
+AR Path="/627DD6B0/62684658" Ref="#PWR?"  Part="1" 
+AR Path="/622D361F/62684658" Ref="#PWR038"  Part="1" 
+F 0 "#PWR038" H 9500 4350 50  0001 C CNN
+F 1 "GND" H 9505 4427 50  0000 C CNN
+F 2 "" H 9500 4600 50  0001 C CNN
+F 3 "" H 9500 4600 50  0001 C CNN
+	1    9500 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 4200 9000 4300
+$Comp
+L 74xx:74LS541 U?
+U 1 1 6268465F
+P 9500 3800
+AR Path="/6268465F" Ref="U?"  Part="1" 
+AR Path="/627DD6B0/6268465F" Ref="U?"  Part="1" 
+AR Path="/622D361F/6268465F" Ref="U12"  Part="1" 
+F 0 "U12" H 9150 4550 50  0000 C CNN
+F 1 "74LS541" H 9250 4450 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 9500 3800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS541" H 9500 3800 50  0001 C CNN
+	1    9500 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R?
+U 1 1 626846A5
+P 7500 2400
+AR Path="/626846A5" Ref="R?"  Part="1" 
+AR Path="/627DD6B0/626846A5" Ref="R?"  Part="1" 
+AR Path="/622D361F/626846A5" Ref="R9"  Part="1" 
+F 0 "R9" H 7350 2450 50  0000 L CNN
+F 1 "50K" H 7300 2350 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7430 2400 50  0001 C CNN
+F 3 "~" H 7500 2400 50  0001 C CNN
+	1    7500 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R?
+U 1 1 626846AB
+P 9000 2400
+AR Path="/626846AB" Ref="R?"  Part="1" 
+AR Path="/627DD6B0/626846AB" Ref="R?"  Part="1" 
+AR Path="/622D361F/626846AB" Ref="R10"  Part="1" 
+F 0 "R10" H 8850 2450 50  0000 L CNN
+F 1 "50K" H 8800 2350 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8930 2400 50  0001 C CNN
+F 3 "~" H 9000 2400 50  0001 C CNN
+	1    9000 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 2550 7500 3000
+Wire Wire Line
+	7500 3000 8000 3000
+Connection ~ 8000 3000
+Wire Wire Line
+	9000 2550 9500 2550
+Connection ~ 9500 2550
+Connection ~ 7500 2250
+Connection ~ 9000 2250
+Text Label 7500 1250 2    50   ~ 0
+JB0
+Text Label 7500 1350 2    50   ~ 0
+JB1
+Text Label 7500 1450 2    50   ~ 0
+JB2
+Text Label 7500 1550 2    50   ~ 0
+JB3
+Text Label 7500 1650 2    50   ~ 0
+JB4
+Text Label 7500 1750 2    50   ~ 0
+JB5
+Text Label 7500 1850 2    50   ~ 0
+JB6
+Text Label 7500 1950 2    50   ~ 0
+JB7
+Text Label 9000 1250 2    50   ~ 0
+JB0
+Text Label 9000 1350 2    50   ~ 0
+JB1
+Text Label 9000 1450 2    50   ~ 0
+JB2
+Text Label 9000 1550 2    50   ~ 0
+JB3
+Text Label 9000 1650 2    50   ~ 0
+JB4
+Text Label 9000 1750 2    50   ~ 0
+JB5
+Text Label 9000 1850 2    50   ~ 0
+JB6
+Text Label 9000 1950 2    50   ~ 0
+JB7
+Text Label 7500 3300 2    50   ~ 0
+JB8
+Text Label 7500 3400 2    50   ~ 0
+JB9
+Text Label 7500 3500 2    50   ~ 0
+JB10
+Text Label 7500 3600 2    50   ~ 0
+JB11
+Text Label 7500 3700 2    50   ~ 0
+JB12
+Text Label 7500 3800 2    50   ~ 0
+JB13
+Text Label 7500 3900 2    50   ~ 0
+JB14
+Text Label 7500 4000 2    50   ~ 0
+JB15
+Text Label 9000 3300 2    50   ~ 0
+JB8
+Text Label 9000 3400 2    50   ~ 0
+JB9
+Text Label 9000 3500 2    50   ~ 0
+JB10
+Text Label 9000 3600 2    50   ~ 0
+JB11
+Text Label 9000 3700 2    50   ~ 0
+JB12
+Text Label 9000 3800 2    50   ~ 0
+JB13
+Text Label 9000 3900 2    50   ~ 0
+JB14
+Text Label 9000 4000 2    50   ~ 0
+JB15
+Text GLabel 9000 4250 0    50   Input ~ 0
+JumpBufferBOutput
+Text GLabel 9000 2200 0    50   Input ~ 0
+JumpBufferBOutput
+Text GLabel 7500 2200 0    50   Input ~ 0
+JumpBufferAOutput
+Text GLabel 7500 4250 0    50   Input ~ 0
+JumpBufferAOutput
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR040
+U 1 1 6278DE39
+P 2550 5150
+F 0 "#PWR040" H 2550 4900 50  0001 C CNN
+F 1 "GND" H 2450 5150 50  0000 C CNN
+F 2 "" H 2550 5150 50  0001 C CNN
+F 3 "" H 2550 5150 50  0001 C CNN
+	1    2550 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:CD4029BEE4-CPU_ics U16
+U 1 1 6210F4EB
+P 3400 6000
+F 0 "U16" H 3600 6200 50  0000 C CNN
+F 1 "CD4029BEE4" H 3800 6100 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 5250 6100 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4029b.pdf" H 5250 6000 50  0001 L CNN
+F 4 "CD4029BEE4, 4-stage Decade and Binary Counter Up/Down Counter, Bi-Directional, 3  18 V, 16-Pin PDIP" H 5250 5900 50  0001 L CNN "Description"
+F 5 "5.08" H 5250 5800 50  0001 L CNN "Height"
+F 6 "595-CD4029BEE4" H 5250 5700 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD4029BEE4?qs=LU5rZWrBGo0epKDtktqo2w%3D%3D" H 5250 5600 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 5250 5500 50  0001 L CNN "Manufacturer_Name"
+F 9 "CD4029BEE4" H 5250 5400 50  0001 L CNN "Manufacturer_Part_Number"
+	1    3400 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR048
+U 1 1 62116DBC
+P 3400 6700
+F 0 "#PWR048" H 3400 6450 50  0001 C CNN
+F 1 "GND" H 3405 6527 50  0000 C CNN
+F 2 "" H 3400 6700 50  0001 C CNN
+F 3 "" H 3400 6700 50  0001 C CNN
+	1    3400 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR044
+U 1 1 62118126
+P 4850 6000
+F 0 "#PWR044" H 4850 5850 50  0001 C CNN
+F 1 "+5V" H 4865 6173 50  0000 C CNN
+F 2 "" H 4850 6000 50  0001 C CNN
+F 3 "" H 4850 6000 50  0001 C CNN
+	1    4850 6000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4850 6700
+Text GLabel 3400 6100 0    50   Input ~ 0
+CLK
+Text Label 4850 6200 0    50   ~ 0
+State0
+Text Label 4850 6300 0    50   ~ 0
+State1
+Text Label 4850 6400 0    50   ~ 0
+State2
+NoConn ~ 4850 6500
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R18
+U 1 1 6214822B
+P 5000 6600
+F 0 "R18" V 5000 6250 50  0000 L CNN
+F 1 "50K" V 5000 6550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4930 6600 50  0001 C CNN
+F 3 "~" H 5000 6600 50  0001 C CNN
+	1    5000 6600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR047
+U 1 1 6214F9D3
+P 5150 6600
+F 0 "#PWR047" H 5150 6450 50  0001 C CNN
+F 1 "+5V" H 5165 6773 50  0000 C CNN
+F 2 "" H 5150 6600 50  0001 C CNN
+F 3 "" H 5150 6600 50  0001 C CNN
+	1    5150 6600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3400 6200
+NoConn ~ 3400 6300
+NoConn ~ 3400 6400
+NoConn ~ 3400 6500
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR045
+U 1 1 6217D928
+P 5600 6100
+F 0 "#PWR045" H 5600 5850 50  0001 C CNN
+F 1 "GND" H 5600 5900 50  0000 C CNN
+F 2 "" H 5600 6100 50  0001 C CNN
+F 3 "" H 5600 6100 50  0001 C CNN
+	1    5600 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R16
+U 1 1 6217D92E
+P 5450 6100
+F 0 "R16" V 5450 5700 50  0000 L CNN
+F 1 "50K" V 5450 6050 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5380 6100 50  0001 C CNN
+F 3 "~" H 5450 6100 50  0001 C CNN
+	1    5450 6100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4850 6100 5300 6100
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R17
+U 1 1 621A0D55
+P 3250 6600
+F 0 "R17" V 3250 6250 50  0000 L CNN
+F 1 "50K" V 3250 6550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3180 6600 50  0001 C CNN
+F 3 "~" H 3250 6600 50  0001 C CNN
+	1    3250 6600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR046
+U 1 1 621A0D5B
+P 3100 6600
+F 0 "#PWR046" H 3100 6450 50  0001 C CNN
+F 1 "+5V" H 3115 6773 50  0000 C CNN
+F 2 "" H 3100 6600 50  0001 C CNN
+F 3 "" H 3100 6600 50  0001 C CNN
+	1    3100 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:GND-power-MAX7000CPU-Gen2-rescue #PWR043
+U 1 1 621BCE18
+P 3100 6000
+F 0 "#PWR043" H 3100 5750 50  0001 C CNN
+F 1 "GND" H 3100 5800 50  0000 C CNN
+F 2 "" H 3100 6000 50  0001 C CNN
+F 3 "" H 3100 6000 50  0001 C CNN
+	1    3100 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7000CPU-Gen2_5-rescue:R-Device-MAX7000CPU-Gen2-rescue R15
+U 1 1 621BCE1E
+P 3250 6000
+F 0 "R15" V 3250 5600 50  0000 L CNN
+F 1 "50K" V 3250 5950 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3180 6000 50  0001 C CNN
+F 3 "~" H 3250 6000 50  0001 C CNN
+	1    3250 6000
+	0    1    1    0   
+$EndComp
+Text HLabel 1000 2650 0    50   Input ~ 0
+B[0...15]
+Wire Bus Line
+	1000 2650 1150 2650
+Entry Wire Line
+	1150 2700 1250 2800
+Entry Wire Line
+	1150 2800 1250 2900
+Entry Wire Line
+	1150 2900 1250 3000
+Entry Wire Line
+	1150 3000 1250 3100
+Entry Wire Line
+	1150 3100 1250 3200
+Entry Wire Line
+	1150 3200 1250 3300
+Entry Wire Line
+	1150 3300 1250 3400
+Entry Wire Line
+	1150 3400 1250 3500
+Entry Wire Line
+	1150 3500 1250 3600
+Entry Wire Line
+	1150 3600 1250 3700
+Entry Wire Line
+	1150 3700 1250 3800
+Entry Wire Line
+	1150 3800 1250 3900
+Entry Wire Line
+	1150 3900 1250 4000
+Entry Wire Line
+	1150 4000 1250 4100
+Entry Wire Line
+	1150 4100 1250 4200
+Text Label 1300 2800 0    50   ~ 0
+B0
+Text Label 1300 2900 0    50   ~ 0
+B1
+Text Label 1300 3000 0    50   ~ 0
+B2
+Text Label 1300 3100 0    50   ~ 0
+B3
+Text Label 1300 3200 0    50   ~ 0
+B4
+Text Label 1300 3300 0    50   ~ 0
+B5
+Text Label 1300 3400 0    50   ~ 0
+B6
+Text Label 1300 3500 0    50   ~ 0
+B7
+Text Label 1300 3600 0    50   ~ 0
+B8
+Text Label 1300 3700 0    50   ~ 0
+B9
+Text Label 1300 3800 0    50   ~ 0
+B10
+Text Label 1300 3900 0    50   ~ 0
+B11
+Text Label 1300 4000 0    50   ~ 0
+B12
+Text Label 1300 4100 0    50   ~ 0
+B13
+Text Label 1300 4200 0    50   ~ 0
+B14
+Text Label 1300 4300 0    50   ~ 0
+B15
+Entry Wire Line
+	1150 4200 1250 4300
+Wire Wire Line
+	1250 4300 1300 4300
+Wire Wire Line
+	1250 2800 1300 2800
+Wire Wire Line
+	1250 2900 1300 2900
+Wire Wire Line
+	1250 3000 1300 3000
+Wire Wire Line
+	1250 3100 1300 3100
+Wire Wire Line
+	1250 3200 1300 3200
+Wire Wire Line
+	1250 3300 1300 3300
+Wire Wire Line
+	1250 3400 1300 3400
+Wire Wire Line
+	1250 3500 1300 3500
+Wire Wire Line
+	1250 3600 1300 3600
+Wire Wire Line
+	1250 3700 1300 3700
+Wire Wire Line
+	1250 3800 1300 3800
+Wire Wire Line
+	1250 3900 1300 3900
+Wire Wire Line
+	1250 4000 1300 4000
+Wire Wire Line
+	1250 4100 1300 4100
+Wire Wire Line
+	1250 4200 1300 4200
+Text HLabel 10750 800  2    50   Input ~ 0
+RA[0...15]
+Wire Bus Line
+	10750 800  10600 800 
+Entry Wire Line
+	10600 850  10500 950 
+Entry Wire Line
+	10600 950  10500 1050
+Entry Wire Line
+	10600 1050 10500 1150
+Entry Wire Line
+	10600 1150 10500 1250
+Entry Wire Line
+	10600 1250 10500 1350
+Entry Wire Line
+	10600 1350 10500 1450
+Entry Wire Line
+	10600 1450 10500 1550
+Entry Wire Line
+	10600 1550 10500 1650
+Entry Wire Line
+	10600 1650 10500 1750
+Entry Wire Line
+	10600 1750 10500 1850
+Entry Wire Line
+	10600 1850 10500 1950
+Entry Wire Line
+	10600 1950 10500 2050
+Entry Wire Line
+	10600 2050 10500 2150
+Entry Wire Line
+	10600 2150 10500 2250
+Entry Wire Line
+	10600 2250 10500 2350
+Entry Wire Line
+	10600 2350 10500 2450
+Wire Wire Line
+	10500 2450 10450 2450
+Wire Wire Line
+	10500 950  10450 950 
+Wire Wire Line
+	10500 1050 10450 1050
+Wire Wire Line
+	10500 1150 10450 1150
+Wire Wire Line
+	10500 1250 10450 1250
+Wire Wire Line
+	10500 1350 10450 1350
+Wire Wire Line
+	10500 1450 10450 1450
+Wire Wire Line
+	10500 1550 10450 1550
+Wire Wire Line
+	10500 1650 10450 1650
+Wire Wire Line
+	10500 1750 10450 1750
+Wire Wire Line
+	10500 1850 10450 1850
+Wire Wire Line
+	10500 1950 10450 1950
+Wire Wire Line
+	10500 2050 10450 2050
+Wire Wire Line
+	10500 2150 10450 2150
+Wire Wire Line
+	10500 2250 10450 2250
+Wire Wire Line
+	10500 2350 10450 2350
+Text Label 10450 950  2    50   ~ 0
+RA0
+Text Label 10450 1050 2    50   ~ 0
+RA1
+Text Label 10450 1150 2    50   ~ 0
+RA2
+Text Label 10450 1250 2    50   ~ 0
+RA3
+Text Label 10450 1350 2    50   ~ 0
+RA4
+Text Label 10450 1450 2    50   ~ 0
+RA5
+Text Label 10450 1550 2    50   ~ 0
+RA6
+Text Label 10450 1650 2    50   ~ 0
+RA7
+Text Label 10450 1750 2    50   ~ 0
+RA8
+Text Label 10450 1850 2    50   ~ 0
+RA9
+Text Label 10450 1950 2    50   ~ 0
+RA10
+Text Label 10450 2050 2    50   ~ 0
+RA11
+Text Label 10450 2150 2    50   ~ 0
+RA12
+Text Label 10450 2250 2    50   ~ 0
+RA13
+Text Label 10450 2350 2    50   ~ 0
+RA14
+Text Label 10450 2450 2    50   ~ 0
+RA15
+Text HLabel 10750 2800 2    50   Input ~ 0
+r_B[0...15]
+Wire Bus Line
+	10750 2800 10600 2800
+Entry Wire Line
+	10600 2850 10500 2950
+Entry Wire Line
+	10600 2950 10500 3050
+Entry Wire Line
+	10600 3050 10500 3150
+Entry Wire Line
+	10600 3150 10500 3250
+Entry Wire Line
+	10600 3250 10500 3350
+Entry Wire Line
+	10600 3350 10500 3450
+Entry Wire Line
+	10600 3450 10500 3550
+Entry Wire Line
+	10600 3550 10500 3650
+Entry Wire Line
+	10600 3650 10500 3750
+Entry Wire Line
+	10600 3750 10500 3850
+Entry Wire Line
+	10600 3850 10500 3950
+Entry Wire Line
+	10600 3950 10500 4050
+Entry Wire Line
+	10600 4050 10500 4150
+Entry Wire Line
+	10600 4150 10500 4250
+Entry Wire Line
+	10600 4250 10500 4350
+Entry Wire Line
+	10600 4350 10500 4450
+Wire Wire Line
+	10500 4450 10450 4450
+Wire Wire Line
+	10500 2950 10450 2950
+Wire Wire Line
+	10500 3050 10450 3050
+Wire Wire Line
+	10500 3150 10450 3150
+Wire Wire Line
+	10500 3250 10450 3250
+Wire Wire Line
+	10500 3350 10450 3350
+Wire Wire Line
+	10500 3450 10450 3450
+Wire Wire Line
+	10500 3550 10450 3550
+Wire Wire Line
+	10500 3650 10450 3650
+Wire Wire Line
+	10500 3750 10450 3750
+Wire Wire Line
+	10500 3850 10450 3850
+Wire Wire Line
+	10500 3950 10450 3950
+Wire Wire Line
+	10500 4050 10450 4050
+Wire Wire Line
+	10500 4150 10450 4150
+Wire Wire Line
+	10500 4250 10450 4250
+Wire Wire Line
+	10500 4350 10450 4350
+Entry Wire Line
+	10600 4650 10500 4750
+Entry Wire Line
+	10600 4750 10500 4850
+Entry Wire Line
+	10600 4850 10500 4950
+Entry Wire Line
+	10600 4950 10500 5050
+Entry Wire Line
+	10600 5050 10500 5150
+Entry Wire Line
+	10600 5150 10500 5250
+Entry Wire Line
+	10600 5250 10500 5350
+Entry Wire Line
+	10600 5350 10500 5450
+Entry Wire Line
+	10600 5450 10500 5550
+Entry Wire Line
+	10600 5550 10500 5650
+Entry Wire Line
+	10600 5650 10500 5750
+Entry Wire Line
+	10600 5750 10500 5850
+Entry Wire Line
+	10600 5850 10500 5950
+Entry Wire Line
+	10600 5950 10500 6050
+Entry Wire Line
+	10600 6050 10500 6150
+Entry Wire Line
+	10600 6150 10500 6250
+Wire Wire Line
+	10500 6250 10450 6250
+Wire Wire Line
+	10500 4750 10450 4750
+Wire Wire Line
+	10500 4850 10450 4850
+Wire Wire Line
+	10500 4950 10450 4950
+Wire Wire Line
+	10500 5050 10450 5050
+Wire Wire Line
+	10500 5150 10450 5150
+Wire Wire Line
+	10500 5250 10450 5250
+Wire Wire Line
+	10500 5350 10450 5350
+Wire Wire Line
+	10500 5450 10450 5450
+Wire Wire Line
+	10500 5550 10450 5550
+Wire Wire Line
+	10500 5650 10450 5650
+Wire Wire Line
+	10500 5750 10450 5750
+Wire Wire Line
+	10500 5850 10450 5850
+Wire Wire Line
+	10500 5950 10450 5950
+Wire Wire Line
+	10500 6050 10450 6050
+Wire Wire Line
+	10500 6150 10450 6150
+Text HLabel 7750 5350 2    50   Input ~ 0
+State[0...2]
+Wire Bus Line
+	7750 5350 7600 5350
+Entry Wire Line
+	7600 5400 7500 5500
+Entry Wire Line
+	7600 5500 7500 5600
+Entry Wire Line
+	7600 5600 7500 5700
+Wire Wire Line
+	7500 5700 7450 5700
+Wire Wire Line
+	7500 5500 7450 5500
+Wire Wire Line
+	7500 5600 7450 5600
+Text Label 7450 5500 2    50   ~ 0
+State0
+Text Label 7450 5600 2    50   ~ 0
+State1
+Text Label 7450 5700 2    50   ~ 0
+State2
+Text HLabel 10700 4600 2    50   Input ~ 0
+r_A[0...15]
+Wire Bus Line
+	10600 4600 10700 4600
+Text Label 10450 2950 2    50   ~ 0
+r_B0
+Text Label 10450 3050 2    50   ~ 0
+r_B1
+Text Label 10450 3150 2    50   ~ 0
+r_B2
+Text Label 10450 3250 2    50   ~ 0
+r_B3
+Text Label 10450 3350 2    50   ~ 0
+r_B4
+Text Label 10450 3450 2    50   ~ 0
+r_B5
+Text Label 10450 3550 2    50   ~ 0
+r_B6
+Text Label 10450 3650 2    50   ~ 0
+r_B7
+Text Label 10450 3750 2    50   ~ 0
+r_B8
+Text Label 10450 3850 2    50   ~ 0
+r_B9
+Text Label 10450 3950 2    50   ~ 0
+r_B10
+Text Label 10450 4050 2    50   ~ 0
+r_B11
+Text Label 10450 4150 2    50   ~ 0
+r_B12
+Text Label 10450 4250 2    50   ~ 0
+r_B13
+Text Label 10450 4350 2    50   ~ 0
+r_B14
+Text Label 10450 4450 2    50   ~ 0
+r_B15
+Text Label 10000 3300 0    50   ~ 0
+r_B0
+Text Label 10000 3400 0    50   ~ 0
+r_B1
+Text Label 10000 3500 0    50   ~ 0
+r_B2
+Text Label 10000 3600 0    50   ~ 0
+r_B3
+Text Label 10000 3700 0    50   ~ 0
+r_B4
+Text Label 10000 3800 0    50   ~ 0
+r_B5
+Text Label 10000 3900 0    50   ~ 0
+r_B6
+Text Label 10000 4000 0    50   ~ 0
+r_B7
+Text Label 10000 1250 0    50   ~ 0
+r_B8
+Text Label 10000 1350 0    50   ~ 0
+r_B9
+Text Label 10000 1450 0    50   ~ 0
+r_B10
+Text Label 10000 1550 0    50   ~ 0
+r_B11
+Text Label 10000 1650 0    50   ~ 0
+r_B12
+Text Label 10000 1750 0    50   ~ 0
+r_B13
+Text Label 10000 1850 0    50   ~ 0
+r_B14
+Text Label 10000 1950 0    50   ~ 0
+r_B15
+Text Label 10450 4750 2    50   ~ 0
+r_A0
+Text Label 10450 4850 2    50   ~ 0
+r_A1
+Text Label 10450 4950 2    50   ~ 0
+r_A2
+Text Label 10450 5050 2    50   ~ 0
+r_A3
+Text Label 10450 5150 2    50   ~ 0
+r_A4
+Text Label 10450 5250 2    50   ~ 0
+r_A5
+Text Label 10450 5350 2    50   ~ 0
+r_A6
+Text Label 10450 5450 2    50   ~ 0
+r_A7
+Text Label 10450 5550 2    50   ~ 0
+r_A8
+Text Label 10450 5650 2    50   ~ 0
+r_A9
+Text Label 10450 5750 2    50   ~ 0
+r_A10
+Text Label 10450 5850 2    50   ~ 0
+r_A11
+Text Label 10450 5950 2    50   ~ 0
+r_A12
+Text Label 10450 6050 2    50   ~ 0
+r_A13
+Text Label 10450 6150 2    50   ~ 0
+r_A14
+Text Label 10450 6250 2    50   ~ 0
+r_A15
+Text Label 8500 1250 0    50   ~ 0
+r_A0
+Text Label 8500 1350 0    50   ~ 0
+r_A1
+Text Label 8500 1450 0    50   ~ 0
+r_A2
+Text Label 8500 1550 0    50   ~ 0
+r_A3
+Text Label 8500 1650 0    50   ~ 0
+r_A4
+Text Label 8500 1750 0    50   ~ 0
+r_A5
+Text Label 8500 1850 0    50   ~ 0
+r_A6
+Text Label 8500 1950 0    50   ~ 0
+r_A7
+Text Label 8500 3300 0    50   ~ 0
+r_A8
+Text Label 8500 3400 0    50   ~ 0
+r_A9
+Text Label 8500 3500 0    50   ~ 0
+r_A10
+Text Label 8500 3600 0    50   ~ 0
+r_A11
+Text Label 8500 3700 0    50   ~ 0
+r_A12
+Text Label 8500 3800 0    50   ~ 0
+r_A13
+Text Label 8500 3900 0    50   ~ 0
+r_A14
+Text Label 8500 4000 0    50   ~ 0
+r_A15
+$Comp
+L Device:LED D?
+U 1 1 62224F55
+P 4200 7100
+AR Path="/6215C0FF/62224F55" Ref="D?"  Part="1" 
+AR Path="/627DD6B0/62224F55" Ref="D?"  Part="1" 
+AR Path="/622D361F/62224F55" Ref="D1"  Part="1" 
+F 0 "D1" H 4850 7100 50  0000 C CNN
+F 1 "LED" H 5000 7100 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4200 7100 50  0001 C CNN
+F 3 "~" H 4200 7100 50  0001 C CNN
+	1    4200 7100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 62224F5B
+P 4200 7250
+AR Path="/6215C0FF/62224F5B" Ref="D?"  Part="1" 
+AR Path="/627DD6B0/62224F5B" Ref="D?"  Part="1" 
+AR Path="/622D361F/62224F5B" Ref="D2"  Part="1" 
+F 0 "D2" H 4850 7250 50  0000 C CNN
+F 1 "LED" H 5000 7250 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4200 7250 50  0001 C CNN
+F 3 "~" H 4200 7250 50  0001 C CNN
+	1    4200 7250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 62224F61
+P 4200 7400
+AR Path="/6215C0FF/62224F61" Ref="D?"  Part="1" 
+AR Path="/627DD6B0/62224F61" Ref="D?"  Part="1" 
+AR Path="/622D361F/62224F61" Ref="D3"  Part="1" 
+F 0 "D3" H 4850 7400 50  0000 C CNN
+F 1 "LED" H 5000 7400 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4200 7400 50  0001 C CNN
+F 3 "~" H 4200 7400 50  0001 C CNN
+	1    4200 7400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 62224F67
+P 4500 7100
+AR Path="/6215C0FF/62224F67" Ref="R?"  Part="1" 
+AR Path="/627DD6B0/62224F67" Ref="R?"  Part="1" 
+AR Path="/622D361F/62224F67" Ref="R19"  Part="1" 
+F 0 "R19" V 4500 7700 50  0000 C CNN
+F 1 "330" V 4500 7900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4430 7100 50  0001 C CNN
+F 3 "~" H 4500 7100 50  0001 C CNN
+	1    4500 7100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 62224F6D
+P 4500 7250
+AR Path="/6215C0FF/62224F6D" Ref="R?"  Part="1" 
+AR Path="/627DD6B0/62224F6D" Ref="R?"  Part="1" 
+AR Path="/622D361F/62224F6D" Ref="R20"  Part="1" 
+F 0 "R20" V 4500 7850 50  0000 C CNN
+F 1 "330" V 4500 8050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4430 7250 50  0001 C CNN
+F 3 "~" H 4500 7250 50  0001 C CNN
+	1    4500 7250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 62224F73
+P 4500 7400
+AR Path="/6215C0FF/62224F73" Ref="R?"  Part="1" 
+AR Path="/627DD6B0/62224F73" Ref="R?"  Part="1" 
+AR Path="/622D361F/62224F73" Ref="R21"  Part="1" 
+F 0 "R21" V 4500 8000 50  0000 C CNN
+F 1 "330" V 4500 8200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4430 7400 50  0001 C CNN
+F 3 "~" H 4500 7400 50  0001 C CNN
+	1    4500 7400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4650 7100 4650 7250
+Connection ~ 4650 7250
+Wire Wire Line
+	4650 7250 4650 7400
+Connection ~ 4650 7400
+Wire Wire Line
+	4650 7400 4650 7550
+Text Label 4050 7100 2    50   ~ 0
+State0
+Text Label 4050 7250 2    50   ~ 0
+State1
+Text Label 4050 7400 2    50   ~ 0
+State2
+$Comp
+L power:GND #PWR049
+U 1 1 62295D6E
+P 4650 7550
+F 0 "#PWR049" H 4650 7300 50  0001 C CNN
+F 1 "GND" H 4655 7377 50  0000 C CNN
+F 2 "" H 4650 7550 50  0001 C CNN
+F 3 "" H 4650 7550 50  0001 C CNN
+	1    4650 7550
+	1    0    0    -1  
+$EndComp
+Wire Bus Line
+	7600 5350 7600 5600
+Wire Bus Line
+	10600 4600 10600 6150
+Wire Bus Line
+	10600 2800 10600 4350
+Wire Bus Line
+	10600 800  10600 2350
+Wire Bus Line
+	1150 2650 1150 4200
+$EndSCHEMATC

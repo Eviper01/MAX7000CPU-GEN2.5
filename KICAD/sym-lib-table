@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name MAX7000CPU-Gen2_5-rescue)(type Legacy)(uri ${KIPRJMOD}/MAX7000CPU-Gen2_5-rescue.lib)(options "")(descr ""))
+  (lib (name MAX7000CPU-Gen2_5cache)(type Legacy)(uri ${KIPRJMOD}/MAX7000CPU-Gen2_5cache.lib)(options "")(descr ""))
+  (lib (name Retro_Connectors)(type Legacy)(uri E:/Libraries/Documents/MAX7000CPU-GEN2.5/Libraries/kicad_libraries-master/kicad_libraries-master/Custom_Symbols/Custom_Symbols_Library.lib)(options "")(descr ""))
+)
