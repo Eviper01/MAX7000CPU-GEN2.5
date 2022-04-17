@@ -1531,6 +1531,4 @@ $EndComp
 Connection ~ 7000 1350
 Wire Wire Line
 	6950 1350 7000 1350
-Text Notes 4050 2350 0    50   ~ 0
-Reorientate the JTAGH connector on the PCB\n
 $EndSCHEMATC

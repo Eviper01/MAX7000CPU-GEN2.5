@@ -958,6 +958,8 @@ Text Label 2400 5200 0    50   ~ 0
 r_B14
 Text Label 2400 5300 0    50   ~ 0
 r_B15
+Text GLabel 6500 5300 2    50   Output ~ 0
+ProgramEnable
 Wire Bus Line
 	2250 1750 2250 3300
 Wire Bus Line
@@ -966,6 +968,4 @@ Wire Bus Line
 	2250 5450 2250 7000
 Wire Bus Line
 	9050 2700 9050 4250
-Text GLabel 6500 5300 2    50   Input ~ 0
-ProgramEnable
 $EndSCHEMATC

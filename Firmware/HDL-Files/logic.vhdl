@@ -1,17 +1,17 @@
 library ieee;
 use ieee.std_logic_1164.all;
-entity Octal_Bus_Driver is
+entity HexHex_Bus_Driver is
   port(
-  A: In std_logic_vector (7 downto 0);
-  O: Out std_logic_vector (7 downto 0);
+  A: In std_logic_vector (15 downto 0);
+  O: Out std_logic_vector (15 downto 0);
   En: In std_logic
   );
 
-end Octal_Bus_Driver;
+end HexHex_Bus_Driver;
 
-architecture Octal_Bus_Driver_beh of Octal_Bus_Driver is
+architecture HexHex_Bus_Driver_beh of HexHex_Bus_Driver is
 begin
-    O <= A when En='1' else "ZZZZZZZZ";
+    O <= A when En='1' else "ZZZZZZZZZZZZZZZZ";
 end architecture;
 
 
