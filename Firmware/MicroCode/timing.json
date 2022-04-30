@@ -1,0 +1,15 @@
+https://wavedrom.com/editor.html
+############
+The updated timing is an 8 count sequence, design this to space out critical transitions
+
+
+
+#############
+{signal: [
+  {name: "clk", wave: "p......."},
+  {name: "Counter", wave: "h.l....."},
+  {name: "Counter Out", wave:"lh..l..."},
+  {name:"Instruction Read", wave:"l..hl..."},
+  {name: "Ram/Bus out", wave: "l....h.."},
+  {name: "Mod/Main Read", wave:"l.....h."},
+]}

@@ -1,0 +1,8 @@
+anomalous measurements
+
+-> Netlist CounterOutEnable is tied low with measured 180 ohm resistance (expect ~47Kohm)
+->RegRead and ALU_regs should be tied high in the design but theyre not (surgery reuired)
+-> No pull resistors on any load enable pin (critical for operation)
+-> Pull resistors on RAM chips are very strange
+-> resistance from 5V to ground seems anomalous
+-> D0 on the main bus is high anomalously (damage to a chip that drives that signal?)
