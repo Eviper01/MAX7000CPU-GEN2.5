@@ -20,8 +20,8 @@ Generic_Opcodes ={  "NOP":    "1011111100000000",
 
 #these define the high bit
 OutputParam_Opcodes = { "LDM":    "10000000",
-                        "LDA":    "10001001",
-                        "LDB":    "10001011",
+                        "RDC":    "10001001",
+                        "RDA":    "10001011",
                         "LKB":    "10001000",
                         "MEO":    "10110001",
                         "USK":    "10110011"}
@@ -33,8 +33,8 @@ OutputParam_Params = { "MAIN":     "11111110",
                         "RJB":     "11110111",
                         "RSP":     "11101111",
                         "RMA":     "11011111",
-                        "PORTC":   "10111111",
-                        "PORTD":   "01111111"}
+                        "PORTA":   "10111111",
+                        "PORTB":   "01111111"}
 
 
 #these define the high bit

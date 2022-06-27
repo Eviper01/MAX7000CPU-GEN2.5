@@ -6,3 +6,9 @@ anomalous measurements
 -> Pull resistors on RAM chips are very strange
 -> resistance from 5V to ground seems anomalous
 -> D0 on the main bus is high anomalously (damage to a chip that drives that signal?)
+-> Port C and D read are on the wrong chip should be swaped with Port A and B latch
+
+-> LDA and LDB insturction don't really make sense due to the swap in Port C and Port D
+
+
+!!!!-> THE (PC and PD read) and (PA PB latch) traces have been scratched out in prep for jumper wires to be connected.
