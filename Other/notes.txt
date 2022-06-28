@@ -10,5 +10,5 @@ anomalous measurements
 
 -> LDA and LDB insturction don't really make sense due to the swap in Port C and Port D
 
-
+-> ALU has to write directly to memeory.
 !!!!-> THE (PC and PD read) and (PA PB latch) traces have been scratched out in prep for jumper wires to be connected.

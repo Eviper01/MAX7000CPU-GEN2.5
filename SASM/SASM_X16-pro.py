@@ -22,7 +22,7 @@ Generic_Opcodes ={  "NOP":    "1011111100000000",
 OutputParam_Opcodes = { "LDM":    "10000000",
                         "RDC":    "10001001",
                         "RDA":    "10001011",
-                        "LKB":    "10001000",
+                        "LKB":    "11001000", # this needs to be programmed into the FPGA aswell (10001000)
                         "MEO":    "10110001",
                         "USK":    "10110011"}
 
