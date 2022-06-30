@@ -22,7 +22,7 @@ Generic_Opcodes ={  "NOP":    "1011111100000000",
 OutputParam_Opcodes = { "LDM":    "10000000",
                         "RDC":    "10001001",
                         "RDA":    "10001011",
-                        "LKB":    "11001000", # this needs to be programmed into the FPGA aswell (10001000)
+                        "LKB":    "11001000", # this needs to be programmed into the FPGA aswell (10001000)????
                         "MEO":    "10110001",
                         "USK":    "10110011"}
 
@@ -38,20 +38,8 @@ OutputParam_Params = { "MAIN":     "11111110",
 
 
 #these define the high bit
-DualInputParam_Opcodes =  { "FLF":    "11110011",
-                            "FLT":    "11111100",
-                            "SUM":    "11001001",
-                            "SUB":    "11010110",
-                            "AOT":    "11111111",
-                            "BOT":    "11111010",
-                            "AMM":    "11001111",
-                            "NTA":    "11110000",
-                            "NTB":    "11110101",
-                            "XOR":    "11111001",
-                            "AND":    "11111110",
-                            "ORR":    "11111011",
-                            "LSH":    "11011100",
-                            "CMP":    "11000110"}
+DualInputParam_Opcodes =  { "SUB":  "11000001",
+                            "NAND": "11000010"}
 
 #this is (7 downto 4)
 RightALU = { "MAIN": "1110",
@@ -67,7 +55,7 @@ LeftALU = { "MAIN": "1110",
 
 
 
-Constants = {"STC":    "0"}
+Constants = {"SMC":    "0"} #this sets the RAM memory address to a constant that is 223 + 256n
 
 
 

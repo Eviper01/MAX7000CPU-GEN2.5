@@ -1,0 +1,1347 @@
+TimeQuest Timing Analyzer report for ALC
+Thu Jun 30 22:12:41 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'CLK_Select'
+ 12. Hold: 'CLK_Select'
+ 13. Minimum Pulse Width: 'ALU_Regs'
+ 14. Minimum Pulse Width: 'CLK_Select'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Propagation Delay
+ 20. Minimum Propagation Delay
+ 21. Output Enable Times
+ 22. Minimum Output Enable Times
+ 23. Output Disable Times
+ 24. Minimum Output Disable Times
+ 25. Setup Transfers
+ 26. Hold Transfers
+ 27. Report TCCS
+ 28. Report RSKM
+ 29. Unconstrained Paths
+ 30. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; ALC                                                               ;
+; Device Family      ; MAX7000S                                                          ;
+; Device Name        ; EPM7128SLC84-15                                                   ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Slow Model                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                 ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets        ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------+
+; ALU_Regs   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ALU_Regs }   ;
+; CLK_Select ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK_Select } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------+
+
+
++-------------------------------------------------+
+; Fmax Summary                                    ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 76.92 MHz ; 76.92 MHz       ; CLK_Select ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------+
+; Setup Summary                        ;
++------------+---------+---------------+
+; Clock      ; Slack   ; End Point TNS ;
++------------+---------+---------------+
+; CLK_Select ; -12.000 ; -12.000       ;
++------------+---------+---------------+
+
+
++------------------------------------+
+; Hold Summary                       ;
++------------+-------+---------------+
+; Clock      ; Slack ; End Point TNS ;
++------------+-------+---------------+
+; CLK_Select ; 5.000 ; 0.000         ;
++------------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++-------------------------------------+
+; Minimum Pulse Width Summary         ;
++------------+--------+---------------+
+; Clock      ; Slack  ; End Point TNS ;
++------------+--------+---------------+
+; ALU_Regs   ; -5.500 ; -33.000       ;
+; CLK_Select ; -5.500 ; -22.000       ;
++------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'CLK_Select'                                                                                                                     ;
++---------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                  ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; -12.000 ; D_flip_flop:CLKFLOP|Q~reg0 ; D_flip_flop:CLKFLOP|Q~reg0 ; CLK_Select   ; CLK_Select  ; 1.000        ; 0.000      ; 9.000      ;
+; -12.000 ; D_flip_flop:CLKFLOP|Q~en   ; D_flip_flop:CLKFLOP|Q~reg0 ; CLK_Select   ; CLK_Select  ; 1.000        ; 0.000      ; 9.000      ;
++---------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'CLK_Select'                                                                                                                    ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                  ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; 5.000 ; D_flip_flop:CLKFLOP|Q~reg0 ; D_flip_flop:CLKFLOP|Q~reg0 ; CLK_Select   ; CLK_Select  ; 0.000        ; 0.000      ; 9.000      ;
+; 5.000 ; D_flip_flop:CLKFLOP|Q~en   ; D_flip_flop:CLKFLOP|Q~reg0 ; CLK_Select   ; CLK_Select  ; 0.000        ; 0.000      ; 9.000      ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'ALU_Regs'                                                                                      ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                           ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------+
+; -5.500 ; 0.500        ; 6.000          ; High Pulse Width ; ALU_Regs ; Fall       ; D_flip_flop:ABFlagFlop|Q~reg0    ;
+; -5.500 ; 0.500        ; 6.000          ; Low Pulse Width  ; ALU_Regs ; Fall       ; D_flip_flop:ABFlagFlop|Q~reg0    ;
+; -5.500 ; 0.500        ; 6.000          ; High Pulse Width ; ALU_Regs ; Fall       ; D_flip_flop:CarryFlagFlop|Q~en   ;
+; -5.500 ; 0.500        ; 6.000          ; Low Pulse Width  ; ALU_Regs ; Fall       ; D_flip_flop:CarryFlagFlop|Q~en   ;
+; -5.500 ; 0.500        ; 6.000          ; High Pulse Width ; ALU_Regs ; Fall       ; D_flip_flop:CarryFlagFlop|Q~reg0 ;
+; -5.500 ; 0.500        ; 6.000          ; Low Pulse Width  ; ALU_Regs ; Fall       ; D_flip_flop:CarryFlagFlop|Q~reg0 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ALU_Regs ; Rise       ; ABFlagFlop|Q~reg0|[8]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ALU_Regs ; Rise       ; ABFlagFlop|Q~reg0|[8]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ALU_Regs ; Rise       ; ALU_Regs|dataout                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ALU_Regs ; Rise       ; ALU_Regs|dataout                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ALU_Regs ; Rise       ; CarryFlagFlop|Q~en|[0]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ALU_Regs ; Rise       ; CarryFlagFlop|Q~en|[0]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ALU_Regs ; Rise       ; CarryFlagFlop|Q~reg0|[3]         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ALU_Regs ; Rise       ; CarryFlagFlop|Q~reg0|[3]         ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'CLK_Select'                                                                                ;
++--------+--------------+----------------+------------------+------------+------------+----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock      ; Clock Edge ; Target                     ;
++--------+--------------+----------------+------------------+------------+------------+----------------------------+
+; -5.500 ; 0.500        ; 6.000          ; High Pulse Width ; CLK_Select ; Rise       ; D_flip_flop:CLKFLOP|Q~en   ;
+; -5.500 ; 0.500        ; 6.000          ; Low Pulse Width  ; CLK_Select ; Rise       ; D_flip_flop:CLKFLOP|Q~en   ;
+; -5.500 ; 0.500        ; 6.000          ; High Pulse Width ; CLK_Select ; Rise       ; D_flip_flop:CLKFLOP|Q~reg0 ;
+; -5.500 ; 0.500        ; 6.000          ; Low Pulse Width  ; CLK_Select ; Rise       ; D_flip_flop:CLKFLOP|Q~reg0 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_Select ; Rise       ; CLKFLOP|Q~en|[0]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_Select ; Rise       ; CLKFLOP|Q~en|[0]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_Select ; Rise       ; CLKFLOP|Q~reg0|[2]         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_Select ; Rise       ; CLKFLOP|Q~reg0|[2]         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_Select ; Rise       ; CLK_Select|dataout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_Select ; Rise       ; CLK_Select|dataout         ;
++--------+--------------+----------------+------------------+------------+------------+----------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Ins[*]    ; ALU_Regs   ; 15.000 ; 15.000 ; Fall       ; ALU_Regs        ;
+;  Ins[0]   ; ALU_Regs   ; 15.000 ; 15.000 ; Fall       ; ALU_Regs        ;
+;  Ins[1]   ; ALU_Regs   ; 15.000 ; 15.000 ; Fall       ; ALU_Regs        ;
+;  Ins[2]   ; ALU_Regs   ; 15.000 ; 15.000 ; Fall       ; ALU_Regs        ;
+;  Ins[3]   ; ALU_Regs   ; 15.000 ; 15.000 ; Fall       ; ALU_Regs        ;
+;  Ins[4]   ; ALU_Regs   ; 15.000 ; 15.000 ; Fall       ; ALU_Regs        ;
+;  Ins[5]   ; ALU_Regs   ; 15.000 ; 15.000 ; Fall       ; ALU_Regs        ;
+; regA[*]   ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regA[0]  ; ALU_Regs   ; 14.000 ; 14.000 ; Fall       ; ALU_Regs        ;
+;  regA[1]  ; ALU_Regs   ; 22.000 ; 22.000 ; Fall       ; ALU_Regs        ;
+;  regA[2]  ; ALU_Regs   ; 22.000 ; 22.000 ; Fall       ; ALU_Regs        ;
+;  regA[3]  ; ALU_Regs   ; 22.000 ; 22.000 ; Fall       ; ALU_Regs        ;
+;  regA[4]  ; ALU_Regs   ; 23.000 ; 23.000 ; Fall       ; ALU_Regs        ;
+;  regA[5]  ; ALU_Regs   ; 23.000 ; 23.000 ; Fall       ; ALU_Regs        ;
+;  regA[6]  ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regA[7]  ; ALU_Regs   ; 23.000 ; 23.000 ; Fall       ; ALU_Regs        ;
+;  regA[8]  ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regA[9]  ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regA[10] ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regA[11] ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regA[12] ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regA[13] ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regA[14] ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regA[15] ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+; regB[*]   ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regB[0]  ; ALU_Regs   ; 14.000 ; 14.000 ; Fall       ; ALU_Regs        ;
+;  regB[1]  ; ALU_Regs   ; 22.000 ; 22.000 ; Fall       ; ALU_Regs        ;
+;  regB[2]  ; ALU_Regs   ; 22.000 ; 22.000 ; Fall       ; ALU_Regs        ;
+;  regB[3]  ; ALU_Regs   ; 22.000 ; 22.000 ; Fall       ; ALU_Regs        ;
+;  regB[4]  ; ALU_Regs   ; 23.000 ; 23.000 ; Fall       ; ALU_Regs        ;
+;  regB[5]  ; ALU_Regs   ; 23.000 ; 23.000 ; Fall       ; ALU_Regs        ;
+;  regB[6]  ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regB[7]  ; ALU_Regs   ; 23.000 ; 23.000 ; Fall       ; ALU_Regs        ;
+;  regB[8]  ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regB[9]  ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regB[10] ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regB[11] ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regB[12] ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regB[13] ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regB[14] ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
+;  regB[15] ; ALU_Regs   ; 24.000 ; 24.000 ; Fall       ; ALU_Regs        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Ins[*]    ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  Ins[0]   ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  Ins[1]   ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  Ins[2]   ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  Ins[3]   ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  Ins[4]   ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  Ins[5]   ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+; regA[*]   ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regA[0]  ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regA[1]  ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regA[2]  ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regA[3]  ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regA[4]  ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regA[5]  ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regA[6]  ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regA[7]  ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regA[8]  ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regA[9]  ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regA[10] ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regA[11] ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regA[12] ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regA[13] ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regA[14] ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regA[15] ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+; regB[*]   ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regB[0]  ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regB[1]  ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regB[2]  ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regB[3]  ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regB[4]  ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regB[5]  ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regB[6]  ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regB[7]  ; ALU_Regs   ; -4.000 ; -4.000 ; Fall       ; ALU_Regs        ;
+;  regB[8]  ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regB[9]  ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regB[10] ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regB[11] ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regB[12] ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regB[13] ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regB[14] ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
+;  regB[15] ; ALU_Regs   ; -5.000 ; -5.000 ; Fall       ; ALU_Regs        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; EqualFlag    ; ALU_Regs   ; 15.000 ; 15.000 ; Fall       ; ALU_Regs        ;
+; OverflowFlag ; ALU_Regs   ; 15.000 ; 15.000 ; Fall       ; ALU_Regs        ;
+; CLK          ; CLK_Select ; 24.000 ; 24.000 ; Rise       ; CLK_Select      ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; EqualFlag    ; ALU_Regs   ; 15.000 ; 15.000 ; Fall       ; ALU_Regs        ;
+; OverflowFlag ; ALU_Regs   ; 15.000 ; 15.000 ; Fall       ; ALU_Regs        ;
+; CLK          ; CLK_Select ; 24.000 ; 24.000 ; Rise       ; CLK_Select      ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; FastCLK    ; CLK         ; 15.000 ;        ;        ; 15.000 ;
+; Ins[0]     ; MainBus[0]  ; 15.000 ;        ;        ; 15.000 ;
+; Ins[0]     ; MainBus[1]  ; 15.000 ; 16.000 ; 16.000 ; 15.000 ;
+; Ins[0]     ; MainBus[2]  ; 24.000 ;        ;        ; 24.000 ;
+; Ins[0]     ; MainBus[3]  ;        ; 34.000 ; 34.000 ;        ;
+; Ins[0]     ; MainBus[4]  ; 24.000 ;        ;        ; 24.000 ;
+; Ins[0]     ; MainBus[5]  ; 24.000 ;        ;        ; 24.000 ;
+; Ins[0]     ; MainBus[6]  ; 24.000 ;        ;        ; 24.000 ;
+; Ins[0]     ; MainBus[7]  ; 24.000 ;        ;        ; 24.000 ;
+; Ins[0]     ; MainBus[8]  ; 24.000 ; 23.000 ; 23.000 ; 24.000 ;
+; Ins[0]     ; MainBus[9]  ; 33.000 ;        ;        ; 33.000 ;
+; Ins[0]     ; MainBus[10] ; 33.000 ;        ;        ; 33.000 ;
+; Ins[0]     ; MainBus[11] ; 33.000 ;        ;        ; 33.000 ;
+; Ins[0]     ; MainBus[12] ; 34.000 ;        ;        ; 34.000 ;
+; Ins[0]     ; MainBus[13] ; 33.000 ;        ;        ; 33.000 ;
+; Ins[0]     ; MainBus[14] ; 34.000 ; 32.000 ; 32.000 ; 34.000 ;
+; Ins[0]     ; MainBus[15] ; 33.000 ;        ;        ; 33.000 ;
+; Ins[1]     ; MainBus[0]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[1]     ; MainBus[1]  ; 16.000 ; 15.000 ; 15.000 ; 16.000 ;
+; Ins[1]     ; MainBus[2]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[1]     ; MainBus[3]  ; 34.000 ;        ;        ; 34.000 ;
+; Ins[1]     ; MainBus[4]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[1]     ; MainBus[5]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[1]     ; MainBus[6]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[1]     ; MainBus[7]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[1]     ; MainBus[8]  ; 23.000 ; 24.000 ; 24.000 ; 23.000 ;
+; Ins[1]     ; MainBus[9]  ;        ; 33.000 ; 33.000 ;        ;
+; Ins[1]     ; MainBus[10] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[1]     ; MainBus[11] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[1]     ; MainBus[12] ;        ; 34.000 ; 34.000 ;        ;
+; Ins[1]     ; MainBus[13] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[1]     ; MainBus[14] ; 32.000 ; 34.000 ; 34.000 ; 32.000 ;
+; Ins[1]     ; MainBus[15] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[2]     ; MainBus[0]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[2]     ; MainBus[1]  ; 16.000 ; 15.000 ; 15.000 ; 16.000 ;
+; Ins[2]     ; MainBus[2]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[2]     ; MainBus[3]  ; 34.000 ;        ;        ; 34.000 ;
+; Ins[2]     ; MainBus[4]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[2]     ; MainBus[5]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[2]     ; MainBus[6]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[2]     ; MainBus[7]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[2]     ; MainBus[8]  ; 23.000 ; 24.000 ; 24.000 ; 23.000 ;
+; Ins[2]     ; MainBus[9]  ;        ; 33.000 ; 33.000 ;        ;
+; Ins[2]     ; MainBus[10] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[2]     ; MainBus[11] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[2]     ; MainBus[12] ;        ; 34.000 ; 34.000 ;        ;
+; Ins[2]     ; MainBus[13] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[2]     ; MainBus[14] ; 32.000 ; 34.000 ; 34.000 ; 32.000 ;
+; Ins[2]     ; MainBus[15] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[3]     ; MainBus[0]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[3]     ; MainBus[1]  ; 16.000 ; 15.000 ; 15.000 ; 16.000 ;
+; Ins[3]     ; MainBus[2]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[3]     ; MainBus[3]  ; 34.000 ;        ;        ; 34.000 ;
+; Ins[3]     ; MainBus[4]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[3]     ; MainBus[5]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[3]     ; MainBus[6]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[3]     ; MainBus[7]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[3]     ; MainBus[8]  ; 23.000 ; 24.000 ; 24.000 ; 23.000 ;
+; Ins[3]     ; MainBus[9]  ;        ; 33.000 ; 33.000 ;        ;
+; Ins[3]     ; MainBus[10] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[3]     ; MainBus[11] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[3]     ; MainBus[12] ;        ; 34.000 ; 34.000 ;        ;
+; Ins[3]     ; MainBus[13] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[3]     ; MainBus[14] ; 32.000 ; 34.000 ; 34.000 ; 32.000 ;
+; Ins[3]     ; MainBus[15] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[4]     ; MainBus[0]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[4]     ; MainBus[1]  ; 16.000 ; 15.000 ; 15.000 ; 16.000 ;
+; Ins[4]     ; MainBus[2]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[4]     ; MainBus[3]  ; 34.000 ;        ;        ; 34.000 ;
+; Ins[4]     ; MainBus[4]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[4]     ; MainBus[5]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[4]     ; MainBus[6]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[4]     ; MainBus[7]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[4]     ; MainBus[8]  ; 23.000 ; 24.000 ; 24.000 ; 23.000 ;
+; Ins[4]     ; MainBus[9]  ;        ; 33.000 ; 33.000 ;        ;
+; Ins[4]     ; MainBus[10] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[4]     ; MainBus[11] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[4]     ; MainBus[12] ;        ; 34.000 ; 34.000 ;        ;
+; Ins[4]     ; MainBus[13] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[4]     ; MainBus[14] ; 32.000 ; 34.000 ; 34.000 ; 32.000 ;
+; Ins[4]     ; MainBus[15] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[5]     ; MainBus[0]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[5]     ; MainBus[1]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; Ins[5]     ; MainBus[2]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[5]     ; MainBus[3]  ; 34.000 ;        ;        ; 34.000 ;
+; Ins[5]     ; MainBus[4]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[5]     ; MainBus[5]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[5]     ; MainBus[6]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[5]     ; MainBus[7]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[5]     ; MainBus[8]  ; 23.000 ; 24.000 ; 24.000 ; 23.000 ;
+; Ins[5]     ; MainBus[9]  ;        ; 33.000 ; 33.000 ;        ;
+; Ins[5]     ; MainBus[10] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[5]     ; MainBus[11] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[5]     ; MainBus[12] ;        ; 34.000 ; 34.000 ;        ;
+; Ins[5]     ; MainBus[13] ;        ; 33.000 ; 33.000 ;        ;
+; Ins[5]     ; MainBus[14] ; 32.000 ; 34.000 ; 34.000 ; 32.000 ;
+; Ins[5]     ; MainBus[15] ;        ; 33.000 ; 33.000 ;        ;
+; UserCLK    ; CLK         ; 15.000 ;        ;        ; 15.000 ;
+; regA[0]    ; MainBus[0]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regA[0]    ; MainBus[1]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regA[0]    ; MainBus[2]  ; 24.000 ; 15.000 ; 15.000 ; 24.000 ;
+; regA[0]    ; MainBus[3]  ; 24.000 ; 33.000 ; 33.000 ; 24.000 ;
+; regA[0]    ; MainBus[4]  ;        ; 32.000 ; 32.000 ;        ;
+; regA[0]    ; MainBus[5]  ;        ; 24.000 ; 24.000 ;        ;
+; regA[0]    ; MainBus[6]  ;        ; 24.000 ; 24.000 ;        ;
+; regA[0]    ; MainBus[7]  ; 33.000 ; 32.000 ; 32.000 ; 33.000 ;
+; regA[0]    ; MainBus[8]  ; 41.000 ;        ;        ; 41.000 ;
+; regA[0]    ; MainBus[9]  ;        ; 50.000 ; 50.000 ;        ;
+; regA[0]    ; MainBus[10] ; 50.000 ;        ;        ; 50.000 ;
+; regA[0]    ; MainBus[11] ; 50.000 ;        ;        ; 50.000 ;
+; regA[0]    ; MainBus[12] ; 50.000 ;        ;        ; 50.000 ;
+; regA[0]    ; MainBus[13] ;        ; 50.000 ; 50.000 ;        ;
+; regA[0]    ; MainBus[14] ; 50.000 ;        ;        ; 50.000 ;
+; regA[0]    ; MainBus[15] ; 50.000 ;        ;        ; 50.000 ;
+; regA[1]    ; MainBus[1]  ; 15.000 ; 16.000 ; 16.000 ; 15.000 ;
+; regA[1]    ; MainBus[2]  ; 16.000 ; 23.000 ; 23.000 ; 16.000 ;
+; regA[1]    ; MainBus[3]  ; 32.000 ; 25.000 ; 25.000 ; 32.000 ;
+; regA[1]    ; MainBus[4]  ;        ; 24.000 ; 24.000 ;        ;
+; regA[1]    ; MainBus[5]  ;        ; 32.000 ; 32.000 ;        ;
+; regA[1]    ; MainBus[6]  ;        ; 32.000 ; 32.000 ;        ;
+; regA[1]    ; MainBus[7]  ; 26.000 ; 25.000 ; 25.000 ; 26.000 ;
+; regA[1]    ; MainBus[8]  ; 34.000 ;        ;        ; 34.000 ;
+; regA[1]    ; MainBus[9]  ;        ; 43.000 ; 43.000 ;        ;
+; regA[1]    ; MainBus[10] ; 43.000 ;        ;        ; 43.000 ;
+; regA[1]    ; MainBus[11] ; 43.000 ;        ;        ; 43.000 ;
+; regA[1]    ; MainBus[12] ; 43.000 ;        ;        ; 43.000 ;
+; regA[1]    ; MainBus[13] ;        ; 43.000 ; 43.000 ;        ;
+; regA[1]    ; MainBus[14] ; 43.000 ;        ;        ; 43.000 ;
+; regA[1]    ; MainBus[15] ; 43.000 ;        ;        ; 43.000 ;
+; regA[2]    ; MainBus[2]  ; 16.000 ; 23.000 ; 23.000 ; 16.000 ;
+; regA[2]    ; MainBus[3]  ; 32.000 ; 25.000 ; 25.000 ; 32.000 ;
+; regA[2]    ; MainBus[4]  ;        ; 32.000 ; 32.000 ;        ;
+; regA[2]    ; MainBus[5]  ;        ; 32.000 ; 32.000 ;        ;
+; regA[2]    ; MainBus[6]  ;        ; 32.000 ; 32.000 ;        ;
+; regA[2]    ; MainBus[7]  ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[2]    ; MainBus[8]  ; 42.000 ;        ;        ; 42.000 ;
+; regA[2]    ; MainBus[9]  ;        ; 51.000 ; 51.000 ;        ;
+; regA[2]    ; MainBus[10] ; 51.000 ;        ;        ; 51.000 ;
+; regA[2]    ; MainBus[11] ; 51.000 ;        ;        ; 51.000 ;
+; regA[2]    ; MainBus[12] ; 51.000 ;        ;        ; 51.000 ;
+; regA[2]    ; MainBus[13] ;        ; 51.000 ; 51.000 ;        ;
+; regA[2]    ; MainBus[14] ; 51.000 ;        ;        ; 51.000 ;
+; regA[2]    ; MainBus[15] ; 51.000 ;        ;        ; 51.000 ;
+; regA[3]    ; MainBus[3]  ; 25.000 ; 25.000 ; 25.000 ; 25.000 ;
+; regA[3]    ; MainBus[4]  ;        ; 32.000 ; 32.000 ;        ;
+; regA[3]    ; MainBus[5]  ;        ; 32.000 ; 32.000 ;        ;
+; regA[3]    ; MainBus[6]  ;        ; 32.000 ; 32.000 ;        ;
+; regA[3]    ; MainBus[7]  ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[3]    ; MainBus[8]  ; 42.000 ;        ;        ; 42.000 ;
+; regA[3]    ; MainBus[9]  ;        ; 51.000 ; 51.000 ;        ;
+; regA[3]    ; MainBus[10] ; 51.000 ;        ;        ; 51.000 ;
+; regA[3]    ; MainBus[11] ; 51.000 ;        ;        ; 51.000 ;
+; regA[3]    ; MainBus[12] ; 51.000 ;        ;        ; 51.000 ;
+; regA[3]    ; MainBus[13] ;        ; 51.000 ; 51.000 ;        ;
+; regA[3]    ; MainBus[14] ; 51.000 ;        ;        ; 51.000 ;
+; regA[3]    ; MainBus[15] ; 51.000 ;        ;        ; 51.000 ;
+; regA[4]    ; MainBus[4]  ; 32.000 ; 32.000 ; 32.000 ; 32.000 ;
+; regA[4]    ; MainBus[5]  ;        ; 32.000 ; 32.000 ;        ;
+; regA[4]    ; MainBus[6]  ;        ; 32.000 ; 32.000 ;        ;
+; regA[4]    ; MainBus[7]  ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[4]    ; MainBus[8]  ; 42.000 ;        ;        ; 42.000 ;
+; regA[4]    ; MainBus[9]  ;        ; 51.000 ; 51.000 ;        ;
+; regA[4]    ; MainBus[10] ; 51.000 ;        ;        ; 51.000 ;
+; regA[4]    ; MainBus[11] ; 51.000 ;        ;        ; 51.000 ;
+; regA[4]    ; MainBus[12] ; 51.000 ;        ;        ; 51.000 ;
+; regA[4]    ; MainBus[13] ;        ; 51.000 ; 51.000 ;        ;
+; regA[4]    ; MainBus[14] ; 51.000 ;        ;        ; 51.000 ;
+; regA[4]    ; MainBus[15] ; 51.000 ;        ;        ; 51.000 ;
+; regA[5]    ; MainBus[5]  ; 32.000 ; 32.000 ; 32.000 ; 32.000 ;
+; regA[5]    ; MainBus[6]  ;        ; 33.000 ; 33.000 ;        ;
+; regA[5]    ; MainBus[7]  ; 25.000 ; 24.000 ; 24.000 ; 25.000 ;
+; regA[5]    ; MainBus[8]  ; 33.000 ; 24.000 ; 24.000 ; 33.000 ;
+; regA[5]    ; MainBus[9]  ;        ; 42.000 ; 42.000 ;        ;
+; regA[5]    ; MainBus[10] ; 42.000 ; 33.000 ; 33.000 ; 42.000 ;
+; regA[5]    ; MainBus[11] ; 42.000 ; 33.000 ; 33.000 ; 42.000 ;
+; regA[5]    ; MainBus[12] ; 42.000 ; 33.000 ; 33.000 ; 42.000 ;
+; regA[5]    ; MainBus[13] ;        ; 42.000 ; 42.000 ;        ;
+; regA[5]    ; MainBus[14] ; 43.000 ; 33.000 ; 33.000 ; 43.000 ;
+; regA[5]    ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[6]    ; MainBus[6]  ; 32.000 ; 32.000 ; 32.000 ; 32.000 ;
+; regA[6]    ; MainBus[7]  ; 25.000 ; 24.000 ; 24.000 ; 25.000 ;
+; regA[6]    ; MainBus[8]  ; 33.000 ; 24.000 ; 24.000 ; 33.000 ;
+; regA[6]    ; MainBus[9]  ;        ; 42.000 ; 42.000 ;        ;
+; regA[6]    ; MainBus[10] ; 42.000 ; 33.000 ; 33.000 ; 42.000 ;
+; regA[6]    ; MainBus[11] ; 42.000 ; 33.000 ; 33.000 ; 42.000 ;
+; regA[6]    ; MainBus[12] ; 42.000 ; 33.000 ; 33.000 ; 42.000 ;
+; regA[6]    ; MainBus[13] ;        ; 42.000 ; 42.000 ;        ;
+; regA[6]    ; MainBus[14] ; 43.000 ; 33.000 ; 33.000 ; 43.000 ;
+; regA[6]    ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[7]    ; MainBus[7]  ; 16.000 ; 16.000 ; 16.000 ; 16.000 ;
+; regA[7]    ; MainBus[8]  ; 33.000 ; 23.000 ; 23.000 ; 33.000 ;
+; regA[7]    ; MainBus[9]  ;        ; 42.000 ; 42.000 ;        ;
+; regA[7]    ; MainBus[10] ; 42.000 ; 43.000 ; 43.000 ; 42.000 ;
+; regA[7]    ; MainBus[11] ; 42.000 ; 44.000 ; 44.000 ; 42.000 ;
+; regA[7]    ; MainBus[12] ; 42.000 ; 35.000 ; 35.000 ; 42.000 ;
+; regA[7]    ; MainBus[13] ;        ; 44.000 ; 44.000 ;        ;
+; regA[7]    ; MainBus[14] ; 45.000 ; 36.000 ; 36.000 ; 45.000 ;
+; regA[7]    ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[8]    ; MainBus[8]  ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; regA[8]    ; MainBus[9]  ;        ; 42.000 ; 42.000 ;        ;
+; regA[8]    ; MainBus[10] ; 42.000 ; 43.000 ; 43.000 ; 42.000 ;
+; regA[8]    ; MainBus[11] ; 42.000 ; 44.000 ; 44.000 ; 42.000 ;
+; regA[8]    ; MainBus[12] ; 42.000 ; 35.000 ; 35.000 ; 42.000 ;
+; regA[8]    ; MainBus[13] ;        ; 44.000 ; 44.000 ;        ;
+; regA[8]    ; MainBus[14] ; 45.000 ; 36.000 ; 36.000 ; 45.000 ;
+; regA[8]    ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[9]    ; MainBus[9]  ; 33.000 ; 42.000 ; 42.000 ; 33.000 ;
+; regA[9]    ; MainBus[10] ; 35.000 ; 43.000 ; 43.000 ; 35.000 ;
+; regA[9]    ; MainBus[11] ; 36.000 ; 44.000 ; 44.000 ; 36.000 ;
+; regA[9]    ; MainBus[12] ; 37.000 ; 42.000 ; 42.000 ; 37.000 ;
+; regA[9]    ; MainBus[13] ; 42.000 ; 44.000 ; 44.000 ; 42.000 ;
+; regA[9]    ; MainBus[14] ; 45.000 ; 43.000 ; 43.000 ; 45.000 ;
+; regA[9]    ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[10]   ; MainBus[10] ; 25.000 ; 25.000 ; 25.000 ; 25.000 ;
+; regA[10]   ; MainBus[11] ; 44.000 ; 43.000 ; 43.000 ; 44.000 ;
+; regA[10]   ; MainBus[12] ; 36.000 ; 42.000 ; 42.000 ; 36.000 ;
+; regA[10]   ; MainBus[13] ; 44.000 ; 43.000 ; 43.000 ; 44.000 ;
+; regA[10]   ; MainBus[14] ; 44.000 ; 45.000 ; 45.000 ; 44.000 ;
+; regA[10]   ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[11]   ; MainBus[11] ; 25.000 ; 25.000 ; 25.000 ; 25.000 ;
+; regA[11]   ; MainBus[12] ; 34.000 ; 26.000 ; 26.000 ; 34.000 ;
+; regA[11]   ; MainBus[13] ;        ; 42.000 ; 42.000 ;        ;
+; regA[11]   ; MainBus[14] ; 43.000 ; 41.000 ; 41.000 ; 43.000 ;
+; regA[11]   ; MainBus[15] ; 43.000 ;        ;        ; 43.000 ;
+; regA[12]   ; MainBus[12] ; 26.000 ; 33.000 ; 33.000 ; 26.000 ;
+; regA[12]   ; MainBus[13] ;        ; 42.000 ; 42.000 ;        ;
+; regA[12]   ; MainBus[14] ; 44.000 ; 41.000 ; 41.000 ; 44.000 ;
+; regA[12]   ; MainBus[15] ; 43.000 ;        ;        ; 43.000 ;
+; regA[13]   ; MainBus[13] ; 41.000 ; 41.000 ; 41.000 ; 41.000 ;
+; regA[13]   ; MainBus[14] ; 44.000 ; 41.000 ; 41.000 ; 44.000 ;
+; regA[13]   ; MainBus[15] ; 43.000 ;        ;        ; 43.000 ;
+; regA[14]   ; MainBus[14] ; 34.000 ; 34.000 ; 34.000 ; 34.000 ;
+; regA[14]   ; MainBus[15] ; 43.000 ;        ;        ; 43.000 ;
+; regA[15]   ; MainBus[15] ; 41.000 ; 41.000 ; 41.000 ; 41.000 ;
+; regB[0]    ; MainBus[0]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regB[0]    ; MainBus[1]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regB[0]    ; MainBus[2]  ; 15.000 ; 24.000 ; 24.000 ; 15.000 ;
+; regB[0]    ; MainBus[3]  ; 33.000 ; 24.000 ; 24.000 ; 33.000 ;
+; regB[0]    ; MainBus[4]  ; 32.000 ;        ;        ; 32.000 ;
+; regB[0]    ; MainBus[5]  ; 24.000 ;        ;        ; 24.000 ;
+; regB[0]    ; MainBus[6]  ; 24.000 ;        ;        ; 24.000 ;
+; regB[0]    ; MainBus[7]  ; 32.000 ; 33.000 ; 33.000 ; 32.000 ;
+; regB[0]    ; MainBus[8]  ;        ; 41.000 ; 41.000 ;        ;
+; regB[0]    ; MainBus[9]  ; 50.000 ;        ;        ; 50.000 ;
+; regB[0]    ; MainBus[10] ;        ; 50.000 ; 50.000 ;        ;
+; regB[0]    ; MainBus[11] ;        ; 50.000 ; 50.000 ;        ;
+; regB[0]    ; MainBus[12] ;        ; 50.000 ; 50.000 ;        ;
+; regB[0]    ; MainBus[13] ; 50.000 ;        ;        ; 50.000 ;
+; regB[0]    ; MainBus[14] ;        ; 50.000 ; 50.000 ;        ;
+; regB[0]    ; MainBus[15] ;        ; 50.000 ; 50.000 ;        ;
+; regB[1]    ; MainBus[1]  ; 16.000 ; 15.000 ; 15.000 ; 16.000 ;
+; regB[1]    ; MainBus[2]  ; 23.000 ; 24.000 ; 24.000 ; 23.000 ;
+; regB[1]    ; MainBus[3]  ; 33.000 ; 32.000 ; 32.000 ; 33.000 ;
+; regB[1]    ; MainBus[4]  ; 32.000 ;        ;        ; 32.000 ;
+; regB[1]    ; MainBus[5]  ; 32.000 ;        ;        ; 32.000 ;
+; regB[1]    ; MainBus[6]  ; 32.000 ;        ;        ; 32.000 ;
+; regB[1]    ; MainBus[7]  ; 24.000 ; 25.000 ; 25.000 ; 24.000 ;
+; regB[1]    ; MainBus[8]  ;        ; 33.000 ; 33.000 ;        ;
+; regB[1]    ; MainBus[9]  ; 42.000 ;        ;        ; 42.000 ;
+; regB[1]    ; MainBus[10] ;        ; 42.000 ; 42.000 ;        ;
+; regB[1]    ; MainBus[11] ;        ; 42.000 ; 42.000 ;        ;
+; regB[1]    ; MainBus[12] ;        ; 42.000 ; 42.000 ;        ;
+; regB[1]    ; MainBus[13] ; 42.000 ;        ;        ; 42.000 ;
+; regB[1]    ; MainBus[14] ;        ; 42.000 ; 42.000 ;        ;
+; regB[1]    ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[2]    ; MainBus[2]  ; 16.000 ; 23.000 ; 23.000 ; 16.000 ;
+; regB[2]    ; MainBus[3]  ; 25.000 ; 32.000 ; 32.000 ; 25.000 ;
+; regB[2]    ; MainBus[4]  ; 32.000 ;        ;        ; 32.000 ;
+; regB[2]    ; MainBus[5]  ; 32.000 ;        ;        ; 32.000 ;
+; regB[2]    ; MainBus[6]  ; 32.000 ;        ;        ; 32.000 ;
+; regB[2]    ; MainBus[7]  ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[2]    ; MainBus[8]  ;        ; 42.000 ; 42.000 ;        ;
+; regB[2]    ; MainBus[9]  ; 51.000 ;        ;        ; 51.000 ;
+; regB[2]    ; MainBus[10] ;        ; 51.000 ; 51.000 ;        ;
+; regB[2]    ; MainBus[11] ;        ; 51.000 ; 51.000 ;        ;
+; regB[2]    ; MainBus[12] ;        ; 51.000 ; 51.000 ;        ;
+; regB[2]    ; MainBus[13] ; 51.000 ;        ;        ; 51.000 ;
+; regB[2]    ; MainBus[14] ;        ; 51.000 ; 51.000 ;        ;
+; regB[2]    ; MainBus[15] ;        ; 51.000 ; 51.000 ;        ;
+; regB[3]    ; MainBus[3]  ; 25.000 ; 25.000 ; 25.000 ; 25.000 ;
+; regB[3]    ; MainBus[4]  ; 32.000 ;        ;        ; 32.000 ;
+; regB[3]    ; MainBus[5]  ; 32.000 ;        ;        ; 32.000 ;
+; regB[3]    ; MainBus[6]  ; 32.000 ;        ;        ; 32.000 ;
+; regB[3]    ; MainBus[7]  ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[3]    ; MainBus[8]  ;        ; 42.000 ; 42.000 ;        ;
+; regB[3]    ; MainBus[9]  ; 51.000 ;        ;        ; 51.000 ;
+; regB[3]    ; MainBus[10] ;        ; 51.000 ; 51.000 ;        ;
+; regB[3]    ; MainBus[11] ;        ; 51.000 ; 51.000 ;        ;
+; regB[3]    ; MainBus[12] ;        ; 51.000 ; 51.000 ;        ;
+; regB[3]    ; MainBus[13] ; 51.000 ;        ;        ; 51.000 ;
+; regB[3]    ; MainBus[14] ;        ; 51.000 ; 51.000 ;        ;
+; regB[3]    ; MainBus[15] ;        ; 51.000 ; 51.000 ;        ;
+; regB[4]    ; MainBus[4]  ; 32.000 ; 32.000 ; 32.000 ; 32.000 ;
+; regB[4]    ; MainBus[5]  ; 32.000 ;        ;        ; 32.000 ;
+; regB[4]    ; MainBus[6]  ; 32.000 ;        ;        ; 32.000 ;
+; regB[4]    ; MainBus[7]  ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[4]    ; MainBus[8]  ;        ; 42.000 ; 42.000 ;        ;
+; regB[4]    ; MainBus[9]  ; 51.000 ;        ;        ; 51.000 ;
+; regB[4]    ; MainBus[10] ;        ; 51.000 ; 51.000 ;        ;
+; regB[4]    ; MainBus[11] ;        ; 51.000 ; 51.000 ;        ;
+; regB[4]    ; MainBus[12] ;        ; 51.000 ; 51.000 ;        ;
+; regB[4]    ; MainBus[13] ; 51.000 ;        ;        ; 51.000 ;
+; regB[4]    ; MainBus[14] ;        ; 51.000 ; 51.000 ;        ;
+; regB[4]    ; MainBus[15] ;        ; 51.000 ; 51.000 ;        ;
+; regB[5]    ; MainBus[5]  ; 32.000 ; 32.000 ; 32.000 ; 32.000 ;
+; regB[5]    ; MainBus[6]  ; 33.000 ;        ;        ; 33.000 ;
+; regB[5]    ; MainBus[7]  ; 24.000 ; 25.000 ; 25.000 ; 24.000 ;
+; regB[5]    ; MainBus[8]  ; 24.000 ; 33.000 ; 33.000 ; 24.000 ;
+; regB[5]    ; MainBus[9]  ; 42.000 ;        ;        ; 42.000 ;
+; regB[5]    ; MainBus[10] ; 33.000 ; 42.000 ; 42.000 ; 33.000 ;
+; regB[5]    ; MainBus[11] ; 33.000 ; 42.000 ; 42.000 ; 33.000 ;
+; regB[5]    ; MainBus[12] ; 33.000 ; 42.000 ; 42.000 ; 33.000 ;
+; regB[5]    ; MainBus[13] ; 42.000 ;        ;        ; 42.000 ;
+; regB[5]    ; MainBus[14] ; 33.000 ; 43.000 ; 43.000 ; 33.000 ;
+; regB[5]    ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[6]    ; MainBus[6]  ; 32.000 ; 32.000 ; 32.000 ; 32.000 ;
+; regB[6]    ; MainBus[7]  ; 24.000 ; 25.000 ; 25.000 ; 24.000 ;
+; regB[6]    ; MainBus[8]  ; 24.000 ; 33.000 ; 33.000 ; 24.000 ;
+; regB[6]    ; MainBus[9]  ; 42.000 ;        ;        ; 42.000 ;
+; regB[6]    ; MainBus[10] ; 33.000 ; 42.000 ; 42.000 ; 33.000 ;
+; regB[6]    ; MainBus[11] ; 33.000 ; 42.000 ; 42.000 ; 33.000 ;
+; regB[6]    ; MainBus[12] ; 33.000 ; 42.000 ; 42.000 ; 33.000 ;
+; regB[6]    ; MainBus[13] ; 42.000 ;        ;        ; 42.000 ;
+; regB[6]    ; MainBus[14] ; 33.000 ; 43.000 ; 43.000 ; 33.000 ;
+; regB[6]    ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[7]    ; MainBus[7]  ; 16.000 ; 16.000 ; 16.000 ; 16.000 ;
+; regB[7]    ; MainBus[8]  ; 23.000 ; 33.000 ; 33.000 ; 23.000 ;
+; regB[7]    ; MainBus[9]  ; 42.000 ;        ;        ; 42.000 ;
+; regB[7]    ; MainBus[10] ; 43.000 ; 42.000 ; 42.000 ; 43.000 ;
+; regB[7]    ; MainBus[11] ; 44.000 ; 42.000 ; 42.000 ; 44.000 ;
+; regB[7]    ; MainBus[12] ; 35.000 ; 42.000 ; 42.000 ; 35.000 ;
+; regB[7]    ; MainBus[13] ; 44.000 ;        ;        ; 44.000 ;
+; regB[7]    ; MainBus[14] ; 36.000 ; 45.000 ; 45.000 ; 36.000 ;
+; regB[7]    ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[8]    ; MainBus[8]  ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; regB[8]    ; MainBus[9]  ; 42.000 ;        ;        ; 42.000 ;
+; regB[8]    ; MainBus[10] ; 43.000 ; 42.000 ; 42.000 ; 43.000 ;
+; regB[8]    ; MainBus[11] ; 44.000 ; 42.000 ; 42.000 ; 44.000 ;
+; regB[8]    ; MainBus[12] ; 35.000 ; 42.000 ; 42.000 ; 35.000 ;
+; regB[8]    ; MainBus[13] ; 44.000 ;        ;        ; 44.000 ;
+; regB[8]    ; MainBus[14] ; 36.000 ; 45.000 ; 45.000 ; 36.000 ;
+; regB[8]    ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[9]    ; MainBus[9]  ; 33.000 ; 42.000 ; 42.000 ; 33.000 ;
+; regB[9]    ; MainBus[10] ; 42.000 ; 34.000 ; 34.000 ; 42.000 ;
+; regB[9]    ; MainBus[11] ; 44.000 ; 36.000 ; 36.000 ; 44.000 ;
+; regB[9]    ; MainBus[12] ; 42.000 ; 37.000 ; 37.000 ; 42.000 ;
+; regB[9]    ; MainBus[13] ; 44.000 ; 42.000 ; 42.000 ; 44.000 ;
+; regB[9]    ; MainBus[14] ; 43.000 ; 45.000 ; 45.000 ; 43.000 ;
+; regB[9]    ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[10]   ; MainBus[10] ; 25.000 ; 25.000 ; 25.000 ; 25.000 ;
+; regB[10]   ; MainBus[11] ; 44.000 ; 43.000 ; 43.000 ; 44.000 ;
+; regB[10]   ; MainBus[12] ; 42.000 ; 37.000 ; 37.000 ; 42.000 ;
+; regB[10]   ; MainBus[13] ; 44.000 ; 43.000 ; 43.000 ; 44.000 ;
+; regB[10]   ; MainBus[14] ; 44.000 ; 45.000 ; 45.000 ; 44.000 ;
+; regB[10]   ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[11]   ; MainBus[11] ; 25.000 ; 25.000 ; 25.000 ; 25.000 ;
+; regB[11]   ; MainBus[12] ; 26.000 ; 34.000 ; 34.000 ; 26.000 ;
+; regB[11]   ; MainBus[13] ; 42.000 ;        ;        ; 42.000 ;
+; regB[11]   ; MainBus[14] ; 41.000 ; 43.000 ; 43.000 ; 41.000 ;
+; regB[11]   ; MainBus[15] ;        ; 43.000 ; 43.000 ;        ;
+; regB[12]   ; MainBus[12] ; 26.000 ; 33.000 ; 33.000 ; 26.000 ;
+; regB[12]   ; MainBus[13] ; 42.000 ;        ;        ; 42.000 ;
+; regB[12]   ; MainBus[14] ; 41.000 ; 44.000 ; 44.000 ; 41.000 ;
+; regB[12]   ; MainBus[15] ;        ; 43.000 ; 43.000 ;        ;
+; regB[13]   ; MainBus[13] ; 41.000 ; 41.000 ; 41.000 ; 41.000 ;
+; regB[13]   ; MainBus[14] ; 41.000 ; 44.000 ; 44.000 ; 41.000 ;
+; regB[13]   ; MainBus[15] ;        ; 43.000 ; 43.000 ;        ;
+; regB[14]   ; MainBus[14] ; 34.000 ; 34.000 ; 34.000 ; 34.000 ;
+; regB[14]   ; MainBus[15] ;        ; 43.000 ; 43.000 ;        ;
+; regB[15]   ; MainBus[15] ; 41.000 ; 41.000 ; 41.000 ; 41.000 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; FastCLK    ; CLK         ; 15.000 ;        ;        ; 15.000 ;
+; Ins[0]     ; MainBus[0]  ; 15.000 ;        ;        ; 15.000 ;
+; Ins[0]     ; MainBus[1]  ; 15.000 ; 16.000 ; 16.000 ; 15.000 ;
+; Ins[0]     ; MainBus[2]  ; 15.000 ;        ;        ; 15.000 ;
+; Ins[0]     ; MainBus[3]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[0]     ; MainBus[4]  ; 15.000 ;        ;        ; 15.000 ;
+; Ins[0]     ; MainBus[5]  ; 15.000 ;        ;        ; 15.000 ;
+; Ins[0]     ; MainBus[6]  ; 15.000 ;        ;        ; 15.000 ;
+; Ins[0]     ; MainBus[7]  ; 15.000 ;        ;        ; 15.000 ;
+; Ins[0]     ; MainBus[8]  ; 15.000 ; 23.000 ; 23.000 ; 15.000 ;
+; Ins[0]     ; MainBus[9]  ; 24.000 ;        ;        ; 24.000 ;
+; Ins[0]     ; MainBus[10] ; 24.000 ;        ;        ; 24.000 ;
+; Ins[0]     ; MainBus[11] ; 24.000 ;        ;        ; 24.000 ;
+; Ins[0]     ; MainBus[12] ; 24.000 ;        ;        ; 24.000 ;
+; Ins[0]     ; MainBus[13] ; 24.000 ;        ;        ; 24.000 ;
+; Ins[0]     ; MainBus[14] ; 24.000 ; 32.000 ; 32.000 ; 24.000 ;
+; Ins[0]     ; MainBus[15] ; 24.000 ;        ;        ; 24.000 ;
+; Ins[1]     ; MainBus[0]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[1]     ; MainBus[1]  ; 16.000 ; 15.000 ; 15.000 ; 16.000 ;
+; Ins[1]     ; MainBus[2]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[1]     ; MainBus[3]  ; 24.000 ;        ;        ; 24.000 ;
+; Ins[1]     ; MainBus[4]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[1]     ; MainBus[5]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[1]     ; MainBus[6]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[1]     ; MainBus[7]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[1]     ; MainBus[8]  ; 23.000 ; 15.000 ; 15.000 ; 23.000 ;
+; Ins[1]     ; MainBus[9]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[1]     ; MainBus[10] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[1]     ; MainBus[11] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[1]     ; MainBus[12] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[1]     ; MainBus[13] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[1]     ; MainBus[14] ; 32.000 ; 24.000 ; 24.000 ; 32.000 ;
+; Ins[1]     ; MainBus[15] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[2]     ; MainBus[0]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[2]     ; MainBus[1]  ; 16.000 ; 15.000 ; 15.000 ; 16.000 ;
+; Ins[2]     ; MainBus[2]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[2]     ; MainBus[3]  ; 24.000 ;        ;        ; 24.000 ;
+; Ins[2]     ; MainBus[4]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[2]     ; MainBus[5]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[2]     ; MainBus[6]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[2]     ; MainBus[7]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[2]     ; MainBus[8]  ; 23.000 ; 15.000 ; 15.000 ; 23.000 ;
+; Ins[2]     ; MainBus[9]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[2]     ; MainBus[10] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[2]     ; MainBus[11] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[2]     ; MainBus[12] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[2]     ; MainBus[13] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[2]     ; MainBus[14] ; 32.000 ; 24.000 ; 24.000 ; 32.000 ;
+; Ins[2]     ; MainBus[15] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[3]     ; MainBus[0]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[3]     ; MainBus[1]  ; 16.000 ; 15.000 ; 15.000 ; 16.000 ;
+; Ins[3]     ; MainBus[2]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[3]     ; MainBus[3]  ; 24.000 ;        ;        ; 24.000 ;
+; Ins[3]     ; MainBus[4]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[3]     ; MainBus[5]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[3]     ; MainBus[6]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[3]     ; MainBus[7]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[3]     ; MainBus[8]  ; 23.000 ; 15.000 ; 15.000 ; 23.000 ;
+; Ins[3]     ; MainBus[9]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[3]     ; MainBus[10] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[3]     ; MainBus[11] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[3]     ; MainBus[12] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[3]     ; MainBus[13] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[3]     ; MainBus[14] ; 32.000 ; 24.000 ; 24.000 ; 32.000 ;
+; Ins[3]     ; MainBus[15] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[4]     ; MainBus[0]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[4]     ; MainBus[1]  ; 16.000 ; 15.000 ; 15.000 ; 16.000 ;
+; Ins[4]     ; MainBus[2]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[4]     ; MainBus[3]  ; 24.000 ;        ;        ; 24.000 ;
+; Ins[4]     ; MainBus[4]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[4]     ; MainBus[5]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[4]     ; MainBus[6]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[4]     ; MainBus[7]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[4]     ; MainBus[8]  ; 23.000 ; 15.000 ; 15.000 ; 23.000 ;
+; Ins[4]     ; MainBus[9]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[4]     ; MainBus[10] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[4]     ; MainBus[11] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[4]     ; MainBus[12] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[4]     ; MainBus[13] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[4]     ; MainBus[14] ; 32.000 ; 24.000 ; 24.000 ; 32.000 ;
+; Ins[4]     ; MainBus[15] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[5]     ; MainBus[0]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[5]     ; MainBus[1]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; Ins[5]     ; MainBus[2]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[5]     ; MainBus[3]  ; 24.000 ;        ;        ; 24.000 ;
+; Ins[5]     ; MainBus[4]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[5]     ; MainBus[5]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[5]     ; MainBus[6]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[5]     ; MainBus[7]  ;        ; 15.000 ; 15.000 ;        ;
+; Ins[5]     ; MainBus[8]  ; 23.000 ; 15.000 ; 15.000 ; 23.000 ;
+; Ins[5]     ; MainBus[9]  ;        ; 24.000 ; 24.000 ;        ;
+; Ins[5]     ; MainBus[10] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[5]     ; MainBus[11] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[5]     ; MainBus[12] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[5]     ; MainBus[13] ;        ; 24.000 ; 24.000 ;        ;
+; Ins[5]     ; MainBus[14] ; 32.000 ; 24.000 ; 24.000 ; 32.000 ;
+; Ins[5]     ; MainBus[15] ;        ; 24.000 ; 24.000 ;        ;
+; UserCLK    ; CLK         ; 15.000 ;        ;        ; 15.000 ;
+; regA[0]    ; MainBus[0]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regA[0]    ; MainBus[1]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regA[0]    ; MainBus[2]  ; 23.000 ; 15.000 ; 15.000 ; 23.000 ;
+; regA[0]    ; MainBus[3]  ; 24.000 ; 32.000 ; 32.000 ; 24.000 ;
+; regA[0]    ; MainBus[4]  ;        ; 32.000 ; 32.000 ;        ;
+; regA[0]    ; MainBus[5]  ;        ; 24.000 ; 24.000 ;        ;
+; regA[0]    ; MainBus[6]  ;        ; 24.000 ; 24.000 ;        ;
+; regA[0]    ; MainBus[7]  ; 26.000 ; 25.000 ; 25.000 ; 26.000 ;
+; regA[0]    ; MainBus[8]  ; 34.000 ;        ;        ; 34.000 ;
+; regA[0]    ; MainBus[9]  ;        ; 43.000 ; 43.000 ;        ;
+; regA[0]    ; MainBus[10] ; 35.000 ;        ;        ; 35.000 ;
+; regA[0]    ; MainBus[11] ; 35.000 ;        ;        ; 35.000 ;
+; regA[0]    ; MainBus[12] ; 35.000 ;        ;        ; 35.000 ;
+; regA[0]    ; MainBus[13] ;        ; 43.000 ; 43.000 ;        ;
+; regA[0]    ; MainBus[14] ; 35.000 ;        ;        ; 35.000 ;
+; regA[0]    ; MainBus[15] ; 43.000 ;        ;        ; 43.000 ;
+; regA[1]    ; MainBus[1]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regA[1]    ; MainBus[2]  ; 16.000 ; 16.000 ; 16.000 ; 16.000 ;
+; regA[1]    ; MainBus[3]  ; 24.000 ; 25.000 ; 25.000 ; 24.000 ;
+; regA[1]    ; MainBus[4]  ;        ; 24.000 ; 24.000 ;        ;
+; regA[1]    ; MainBus[5]  ;        ; 24.000 ; 24.000 ;        ;
+; regA[1]    ; MainBus[6]  ;        ; 24.000 ; 24.000 ;        ;
+; regA[1]    ; MainBus[7]  ; 25.000 ; 24.000 ; 24.000 ; 25.000 ;
+; regA[1]    ; MainBus[8]  ; 33.000 ;        ;        ; 33.000 ;
+; regA[1]    ; MainBus[9]  ;        ; 42.000 ; 42.000 ;        ;
+; regA[1]    ; MainBus[10] ; 34.000 ;        ;        ; 34.000 ;
+; regA[1]    ; MainBus[11] ; 34.000 ;        ;        ; 34.000 ;
+; regA[1]    ; MainBus[12] ; 34.000 ;        ;        ; 34.000 ;
+; regA[1]    ; MainBus[13] ;        ; 42.000 ; 42.000 ;        ;
+; regA[1]    ; MainBus[14] ; 34.000 ;        ;        ; 34.000 ;
+; regA[1]    ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[2]    ; MainBus[2]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regA[2]    ; MainBus[3]  ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; regA[2]    ; MainBus[4]  ;        ; 24.000 ; 24.000 ;        ;
+; regA[2]    ; MainBus[5]  ;        ; 24.000 ; 24.000 ;        ;
+; regA[2]    ; MainBus[6]  ;        ; 24.000 ; 24.000 ;        ;
+; regA[2]    ; MainBus[7]  ; 25.000 ; 24.000 ; 24.000 ; 25.000 ;
+; regA[2]    ; MainBus[8]  ; 33.000 ;        ;        ; 33.000 ;
+; regA[2]    ; MainBus[9]  ;        ; 42.000 ; 42.000 ;        ;
+; regA[2]    ; MainBus[10] ; 34.000 ;        ;        ; 34.000 ;
+; regA[2]    ; MainBus[11] ; 34.000 ;        ;        ; 34.000 ;
+; regA[2]    ; MainBus[12] ; 34.000 ;        ;        ; 34.000 ;
+; regA[2]    ; MainBus[13] ;        ; 42.000 ; 42.000 ;        ;
+; regA[2]    ; MainBus[14] ; 34.000 ;        ;        ; 34.000 ;
+; regA[2]    ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[3]    ; MainBus[3]  ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; regA[3]    ; MainBus[4]  ;        ; 24.000 ; 24.000 ;        ;
+; regA[3]    ; MainBus[5]  ;        ; 24.000 ; 24.000 ;        ;
+; regA[3]    ; MainBus[6]  ;        ; 24.000 ; 24.000 ;        ;
+; regA[3]    ; MainBus[7]  ; 25.000 ; 24.000 ; 24.000 ; 25.000 ;
+; regA[3]    ; MainBus[8]  ; 33.000 ;        ;        ; 33.000 ;
+; regA[3]    ; MainBus[9]  ;        ; 42.000 ; 42.000 ;        ;
+; regA[3]    ; MainBus[10] ; 34.000 ;        ;        ; 34.000 ;
+; regA[3]    ; MainBus[11] ; 34.000 ;        ;        ; 34.000 ;
+; regA[3]    ; MainBus[12] ; 34.000 ;        ;        ; 34.000 ;
+; regA[3]    ; MainBus[13] ;        ; 42.000 ; 42.000 ;        ;
+; regA[3]    ; MainBus[14] ; 34.000 ;        ;        ; 34.000 ;
+; regA[3]    ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[4]    ; MainBus[4]  ; 32.000 ; 23.000 ; 23.000 ; 32.000 ;
+; regA[4]    ; MainBus[5]  ;        ; 25.000 ; 25.000 ;        ;
+; regA[4]    ; MainBus[6]  ;        ; 25.000 ; 25.000 ;        ;
+; regA[4]    ; MainBus[7]  ; 25.000 ; 24.000 ; 24.000 ; 25.000 ;
+; regA[4]    ; MainBus[8]  ; 33.000 ;        ;        ; 33.000 ;
+; regA[4]    ; MainBus[9]  ;        ; 42.000 ; 42.000 ;        ;
+; regA[4]    ; MainBus[10] ; 34.000 ;        ;        ; 34.000 ;
+; regA[4]    ; MainBus[11] ; 34.000 ;        ;        ; 34.000 ;
+; regA[4]    ; MainBus[12] ; 34.000 ;        ;        ; 34.000 ;
+; regA[4]    ; MainBus[13] ;        ; 42.000 ; 42.000 ;        ;
+; regA[4]    ; MainBus[14] ; 34.000 ;        ;        ; 34.000 ;
+; regA[4]    ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[5]    ; MainBus[5]  ; 32.000 ; 15.000 ; 15.000 ; 32.000 ;
+; regA[5]    ; MainBus[6]  ;        ; 25.000 ; 25.000 ;        ;
+; regA[5]    ; MainBus[7]  ; 25.000 ; 24.000 ; 24.000 ; 25.000 ;
+; regA[5]    ; MainBus[8]  ; 33.000 ; 24.000 ; 24.000 ; 33.000 ;
+; regA[5]    ; MainBus[9]  ;        ; 42.000 ; 42.000 ;        ;
+; regA[5]    ; MainBus[10] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[5]    ; MainBus[11] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[5]    ; MainBus[12] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[5]    ; MainBus[13] ;        ; 42.000 ; 42.000 ;        ;
+; regA[5]    ; MainBus[14] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[5]    ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[6]    ; MainBus[6]  ; 32.000 ; 15.000 ; 15.000 ; 32.000 ;
+; regA[6]    ; MainBus[7]  ; 25.000 ; 24.000 ; 24.000 ; 25.000 ;
+; regA[6]    ; MainBus[8]  ; 33.000 ; 24.000 ; 24.000 ; 33.000 ;
+; regA[6]    ; MainBus[9]  ;        ; 42.000 ; 42.000 ;        ;
+; regA[6]    ; MainBus[10] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[6]    ; MainBus[11] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[6]    ; MainBus[12] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[6]    ; MainBus[13] ;        ; 42.000 ; 42.000 ;        ;
+; regA[6]    ; MainBus[14] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[6]    ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[7]    ; MainBus[7]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regA[7]    ; MainBus[8]  ; 23.000 ; 15.000 ; 15.000 ; 23.000 ;
+; regA[7]    ; MainBus[9]  ;        ; 33.000 ; 33.000 ;        ;
+; regA[7]    ; MainBus[10] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[7]    ; MainBus[11] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[7]    ; MainBus[12] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[7]    ; MainBus[13] ;        ; 42.000 ; 42.000 ;        ;
+; regA[7]    ; MainBus[14] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[7]    ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[8]    ; MainBus[8]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regA[8]    ; MainBus[9]  ;        ; 33.000 ; 33.000 ;        ;
+; regA[8]    ; MainBus[10] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[8]    ; MainBus[11] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[8]    ; MainBus[12] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[8]    ; MainBus[13] ;        ; 42.000 ; 42.000 ;        ;
+; regA[8]    ; MainBus[14] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[8]    ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[9]    ; MainBus[9]  ; 33.000 ; 41.000 ; 41.000 ; 33.000 ;
+; regA[9]    ; MainBus[10] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[9]    ; MainBus[11] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[9]    ; MainBus[12] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[9]    ; MainBus[13] ; 42.000 ; 42.000 ; 42.000 ; 42.000 ;
+; regA[9]    ; MainBus[14] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[9]    ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[10]   ; MainBus[10] ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; regA[10]   ; MainBus[11] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[10]   ; MainBus[12] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[10]   ; MainBus[13] ; 42.000 ; 42.000 ; 42.000 ; 42.000 ;
+; regA[10]   ; MainBus[14] ; 34.000 ; 33.000 ; 33.000 ; 34.000 ;
+; regA[10]   ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[11]   ; MainBus[11] ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; regA[11]   ; MainBus[12] ; 24.000 ; 26.000 ; 26.000 ; 24.000 ;
+; regA[11]   ; MainBus[13] ;        ; 41.000 ; 41.000 ;        ;
+; regA[11]   ; MainBus[14] ; 33.000 ; 33.000 ; 33.000 ; 33.000 ;
+; regA[11]   ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[12]   ; MainBus[12] ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; regA[12]   ; MainBus[13] ;        ; 41.000 ; 41.000 ;        ;
+; regA[12]   ; MainBus[14] ; 33.000 ; 33.000 ; 33.000 ; 33.000 ;
+; regA[12]   ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[13]   ; MainBus[13] ; 41.000 ; 32.000 ; 32.000 ; 41.000 ;
+; regA[13]   ; MainBus[14] ; 33.000 ; 33.000 ; 33.000 ; 33.000 ;
+; regA[13]   ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[14]   ; MainBus[14] ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; regA[14]   ; MainBus[15] ; 42.000 ;        ;        ; 42.000 ;
+; regA[15]   ; MainBus[15] ; 41.000 ; 24.000 ; 24.000 ; 41.000 ;
+; regB[0]    ; MainBus[0]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regB[0]    ; MainBus[1]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regB[0]    ; MainBus[2]  ; 15.000 ; 23.000 ; 23.000 ; 15.000 ;
+; regB[0]    ; MainBus[3]  ; 32.000 ; 24.000 ; 24.000 ; 32.000 ;
+; regB[0]    ; MainBus[4]  ; 32.000 ;        ;        ; 32.000 ;
+; regB[0]    ; MainBus[5]  ; 24.000 ;        ;        ; 24.000 ;
+; regB[0]    ; MainBus[6]  ; 24.000 ;        ;        ; 24.000 ;
+; regB[0]    ; MainBus[7]  ; 25.000 ; 26.000 ; 26.000 ; 25.000 ;
+; regB[0]    ; MainBus[8]  ;        ; 34.000 ; 34.000 ;        ;
+; regB[0]    ; MainBus[9]  ; 43.000 ;        ;        ; 43.000 ;
+; regB[0]    ; MainBus[10] ;        ; 35.000 ; 35.000 ;        ;
+; regB[0]    ; MainBus[11] ;        ; 35.000 ; 35.000 ;        ;
+; regB[0]    ; MainBus[12] ;        ; 35.000 ; 35.000 ;        ;
+; regB[0]    ; MainBus[13] ; 43.000 ;        ;        ; 43.000 ;
+; regB[0]    ; MainBus[14] ;        ; 35.000 ; 35.000 ;        ;
+; regB[0]    ; MainBus[15] ;        ; 43.000 ; 43.000 ;        ;
+; regB[1]    ; MainBus[1]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regB[1]    ; MainBus[2]  ; 16.000 ; 15.000 ; 15.000 ; 16.000 ;
+; regB[1]    ; MainBus[3]  ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; regB[1]    ; MainBus[4]  ; 24.000 ;        ;        ; 24.000 ;
+; regB[1]    ; MainBus[5]  ; 24.000 ;        ;        ; 24.000 ;
+; regB[1]    ; MainBus[6]  ; 24.000 ;        ;        ; 24.000 ;
+; regB[1]    ; MainBus[7]  ; 24.000 ; 25.000 ; 25.000 ; 24.000 ;
+; regB[1]    ; MainBus[8]  ;        ; 33.000 ; 33.000 ;        ;
+; regB[1]    ; MainBus[9]  ; 42.000 ;        ;        ; 42.000 ;
+; regB[1]    ; MainBus[10] ;        ; 34.000 ; 34.000 ;        ;
+; regB[1]    ; MainBus[11] ;        ; 34.000 ; 34.000 ;        ;
+; regB[1]    ; MainBus[12] ;        ; 34.000 ; 34.000 ;        ;
+; regB[1]    ; MainBus[13] ; 42.000 ;        ;        ; 42.000 ;
+; regB[1]    ; MainBus[14] ;        ; 34.000 ; 34.000 ;        ;
+; regB[1]    ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[2]    ; MainBus[2]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regB[2]    ; MainBus[3]  ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; regB[2]    ; MainBus[4]  ; 24.000 ;        ;        ; 24.000 ;
+; regB[2]    ; MainBus[5]  ; 24.000 ;        ;        ; 24.000 ;
+; regB[2]    ; MainBus[6]  ; 24.000 ;        ;        ; 24.000 ;
+; regB[2]    ; MainBus[7]  ; 24.000 ; 25.000 ; 25.000 ; 24.000 ;
+; regB[2]    ; MainBus[8]  ;        ; 33.000 ; 33.000 ;        ;
+; regB[2]    ; MainBus[9]  ; 42.000 ;        ;        ; 42.000 ;
+; regB[2]    ; MainBus[10] ;        ; 34.000 ; 34.000 ;        ;
+; regB[2]    ; MainBus[11] ;        ; 34.000 ; 34.000 ;        ;
+; regB[2]    ; MainBus[12] ;        ; 34.000 ; 34.000 ;        ;
+; regB[2]    ; MainBus[13] ; 42.000 ;        ;        ; 42.000 ;
+; regB[2]    ; MainBus[14] ;        ; 34.000 ; 34.000 ;        ;
+; regB[2]    ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[3]    ; MainBus[3]  ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; regB[3]    ; MainBus[4]  ; 24.000 ;        ;        ; 24.000 ;
+; regB[3]    ; MainBus[5]  ; 24.000 ;        ;        ; 24.000 ;
+; regB[3]    ; MainBus[6]  ; 24.000 ;        ;        ; 24.000 ;
+; regB[3]    ; MainBus[7]  ; 24.000 ; 25.000 ; 25.000 ; 24.000 ;
+; regB[3]    ; MainBus[8]  ;        ; 33.000 ; 33.000 ;        ;
+; regB[3]    ; MainBus[9]  ; 42.000 ;        ;        ; 42.000 ;
+; regB[3]    ; MainBus[10] ;        ; 34.000 ; 34.000 ;        ;
+; regB[3]    ; MainBus[11] ;        ; 34.000 ; 34.000 ;        ;
+; regB[3]    ; MainBus[12] ;        ; 34.000 ; 34.000 ;        ;
+; regB[3]    ; MainBus[13] ; 42.000 ;        ;        ; 42.000 ;
+; regB[3]    ; MainBus[14] ;        ; 34.000 ; 34.000 ;        ;
+; regB[3]    ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[4]    ; MainBus[4]  ; 32.000 ; 23.000 ; 23.000 ; 32.000 ;
+; regB[4]    ; MainBus[5]  ; 25.000 ;        ;        ; 25.000 ;
+; regB[4]    ; MainBus[6]  ; 25.000 ;        ;        ; 25.000 ;
+; regB[4]    ; MainBus[7]  ; 24.000 ; 25.000 ; 25.000 ; 24.000 ;
+; regB[4]    ; MainBus[8]  ;        ; 33.000 ; 33.000 ;        ;
+; regB[4]    ; MainBus[9]  ; 42.000 ;        ;        ; 42.000 ;
+; regB[4]    ; MainBus[10] ;        ; 34.000 ; 34.000 ;        ;
+; regB[4]    ; MainBus[11] ;        ; 34.000 ; 34.000 ;        ;
+; regB[4]    ; MainBus[12] ;        ; 34.000 ; 34.000 ;        ;
+; regB[4]    ; MainBus[13] ; 42.000 ;        ;        ; 42.000 ;
+; regB[4]    ; MainBus[14] ;        ; 34.000 ; 34.000 ;        ;
+; regB[4]    ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[5]    ; MainBus[5]  ; 32.000 ; 15.000 ; 15.000 ; 32.000 ;
+; regB[5]    ; MainBus[6]  ; 25.000 ;        ;        ; 25.000 ;
+; regB[5]    ; MainBus[7]  ; 24.000 ; 25.000 ; 25.000 ; 24.000 ;
+; regB[5]    ; MainBus[8]  ; 24.000 ; 33.000 ; 33.000 ; 24.000 ;
+; regB[5]    ; MainBus[9]  ; 42.000 ;        ;        ; 42.000 ;
+; regB[5]    ; MainBus[10] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[5]    ; MainBus[11] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[5]    ; MainBus[12] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[5]    ; MainBus[13] ; 42.000 ;        ;        ; 42.000 ;
+; regB[5]    ; MainBus[14] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[5]    ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[6]    ; MainBus[6]  ; 32.000 ; 15.000 ; 15.000 ; 32.000 ;
+; regB[6]    ; MainBus[7]  ; 24.000 ; 25.000 ; 25.000 ; 24.000 ;
+; regB[6]    ; MainBus[8]  ; 24.000 ; 33.000 ; 33.000 ; 24.000 ;
+; regB[6]    ; MainBus[9]  ; 42.000 ;        ;        ; 42.000 ;
+; regB[6]    ; MainBus[10] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[6]    ; MainBus[11] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[6]    ; MainBus[12] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[6]    ; MainBus[13] ; 42.000 ;        ;        ; 42.000 ;
+; regB[6]    ; MainBus[14] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[6]    ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[7]    ; MainBus[7]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regB[7]    ; MainBus[8]  ; 15.000 ; 23.000 ; 23.000 ; 15.000 ;
+; regB[7]    ; MainBus[9]  ; 33.000 ;        ;        ; 33.000 ;
+; regB[7]    ; MainBus[10] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[7]    ; MainBus[11] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[7]    ; MainBus[12] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[7]    ; MainBus[13] ; 42.000 ;        ;        ; 42.000 ;
+; regB[7]    ; MainBus[14] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[7]    ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[8]    ; MainBus[8]  ; 15.000 ; 15.000 ; 15.000 ; 15.000 ;
+; regB[8]    ; MainBus[9]  ; 33.000 ;        ;        ; 33.000 ;
+; regB[8]    ; MainBus[10] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[8]    ; MainBus[11] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[8]    ; MainBus[12] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[8]    ; MainBus[13] ; 42.000 ;        ;        ; 42.000 ;
+; regB[8]    ; MainBus[14] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[8]    ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[9]    ; MainBus[9]  ; 33.000 ; 41.000 ; 41.000 ; 33.000 ;
+; regB[9]    ; MainBus[10] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[9]    ; MainBus[11] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[9]    ; MainBus[12] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[9]    ; MainBus[13] ; 42.000 ; 42.000 ; 42.000 ; 42.000 ;
+; regB[9]    ; MainBus[14] ; 33.000 ; 34.000 ; 34.000 ; 33.000 ;
+; regB[9]    ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[10]   ; MainBus[10] ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; regB[10]   ; MainBus[11] ; 33.000 ; 33.000 ; 33.000 ; 33.000 ;
+; regB[10]   ; MainBus[12] ; 33.000 ; 33.000 ; 33.000 ; 33.000 ;
+; regB[10]   ; MainBus[13] ; 42.000 ; 42.000 ; 42.000 ; 42.000 ;
+; regB[10]   ; MainBus[14] ; 33.000 ; 33.000 ; 33.000 ; 33.000 ;
+; regB[10]   ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[11]   ; MainBus[11] ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; regB[11]   ; MainBus[12] ; 26.000 ; 24.000 ; 24.000 ; 26.000 ;
+; regB[11]   ; MainBus[13] ; 41.000 ;        ;        ; 41.000 ;
+; regB[11]   ; MainBus[14] ; 33.000 ; 33.000 ; 33.000 ; 33.000 ;
+; regB[11]   ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[12]   ; MainBus[12] ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; regB[12]   ; MainBus[13] ; 41.000 ;        ;        ; 41.000 ;
+; regB[12]   ; MainBus[14] ; 33.000 ; 33.000 ; 33.000 ; 33.000 ;
+; regB[12]   ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[13]   ; MainBus[13] ; 41.000 ; 32.000 ; 32.000 ; 41.000 ;
+; regB[13]   ; MainBus[14] ; 33.000 ; 33.000 ; 33.000 ; 33.000 ;
+; regB[13]   ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[14]   ; MainBus[14] ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; regB[14]   ; MainBus[15] ;        ; 42.000 ; 42.000 ;        ;
+; regB[15]   ; MainBus[15] ; 41.000 ; 24.000 ; 24.000 ; 41.000 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------------------+
+; Output Enable Times                                                      ;
++--------------+------------+--------+------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+------+------------+-----------------+
+; MainBus[*]   ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[0]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[1]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[2]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[3]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[4]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[5]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[6]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[7]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[8]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[9]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[10] ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[11] ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[12] ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[13] ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[14] ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[15] ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+; EqualFlag    ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+; MainBus[*]   ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[0]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[1]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[2]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[3]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[4]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[5]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[6]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[7]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[8]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[9]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[10] ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[11] ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[12] ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[13] ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[14] ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[15] ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+; OverflowFlag ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
++--------------+------------+--------+------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Output Enable Times                                              ;
++--------------+------------+--------+------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+------+------------+-----------------+
+; MainBus[*]   ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[0]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[1]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[2]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[3]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[4]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[5]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[6]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[7]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[8]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[9]  ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[10] ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[11] ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[12] ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[13] ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[14] ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+;  MainBus[15] ; ALU_Regs   ; 22.000 ;      ; Rise       ; ALU_Regs        ;
+; EqualFlag    ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+; MainBus[*]   ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[0]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[1]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[2]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[3]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[4]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[5]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[6]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[7]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[8]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[9]  ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[10] ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[11] ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[12] ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[13] ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[14] ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+;  MainBus[15] ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
+; OverflowFlag ; ALU_Regs   ; 22.000 ;      ; Fall       ; ALU_Regs        ;
++--------------+------------+--------+------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Output Disable Times                                                             ;
++--------------+------------+-----------+-----------+------------+-----------------+
+; Data Port    ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++--------------+------------+-----------+-----------+------------+-----------------+
+; MainBus[*]   ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[0]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[1]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[2]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[3]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[4]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[5]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[6]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[7]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[8]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[9]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[10] ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[11] ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[12] ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[13] ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[14] ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[15] ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+; EqualFlag    ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+; MainBus[*]   ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[0]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[1]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[2]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[3]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[4]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[5]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[6]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[7]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[8]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[9]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[10] ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[11] ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[12] ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[13] ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[14] ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[15] ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+; OverflowFlag ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
++--------------+------------+-----------+-----------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                     ;
++--------------+------------+-----------+-----------+------------+-----------------+
+; Data Port    ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++--------------+------------+-----------+-----------+------------+-----------------+
+; MainBus[*]   ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[0]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[1]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[2]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[3]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[4]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[5]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[6]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[7]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[8]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[9]  ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[10] ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[11] ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[12] ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[13] ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[14] ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+;  MainBus[15] ; ALU_Regs   ; 22.000    ;           ; Rise       ; ALU_Regs        ;
+; EqualFlag    ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+; MainBus[*]   ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[0]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[1]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[2]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[3]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[4]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[5]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[6]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[7]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[8]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[9]  ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[10] ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[11] ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[12] ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[13] ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[14] ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+;  MainBus[15] ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
+; OverflowFlag ; ALU_Regs   ; 22.000    ;           ; Fall       ; ALU_Regs        ;
++--------------+------------+-----------+-----------+------------+-----------------+
+
+
++---------------------------------------------------------------------+
+; Setup Transfers                                                     ;
++------------+------------+----------+----------+----------+----------+
+; From Clock ; To Clock   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+------------+----------+----------+----------+----------+
+; CLK_Select ; CLK_Select ; 2        ; 0        ; 0        ; 0        ;
++------------+------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------+
+; Hold Transfers                                                      ;
++------------+------------+----------+----------+----------+----------+
+; From Clock ; To Clock   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+------------+----------+----------+----------+----------+
+; CLK_Select ; CLK_Select ; 2        ; 0        ; 0        ; 0        ;
++------------+------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 41    ; 41   ;
+; Unconstrained Input Port Paths  ; 456   ; 456  ;
+; Unconstrained Output Ports      ; 19    ; 19   ;
+; Unconstrained Output Port Paths ; 392   ; 392  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Jun 30 22:12:41 2022
+Info: Command: quartus_sta MAX7000CPU-GEN2-5-ALC -c ALC
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (306004): Started post-fitting delay annotation
+Info (306005): Delay annotation completed successfully
+Warning (335095): TimeQuest Timing Analyzer does not support the analysis of latches as synchronous elements for the currently selected device family.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'ALC.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK_Select CLK_Select
+    Info (332105): create_clock -period 1.000 -name ALU_Regs ALU_Regs
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -12.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -12.000       -12.000 CLK_Select 
+Info (332146): Worst-case hold slack is 5.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     5.000         0.000 CLK_Select 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -5.500
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -5.500       -33.000 ALU_Regs 
+    Info (332119):    -5.500       -22.000 CLK_Select 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4508 megabytes
+    Info: Processing ended: Thu Jun 30 22:12:41 2022
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

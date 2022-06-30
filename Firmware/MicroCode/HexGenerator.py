@@ -1,13 +1,31 @@
 import pandas as pd
 from collections import Counter
 import mmap
-
+import math
 df = pd.read_csv("X16 Microcode.csv", header=1)
 
 #add the safe state as the default when writing to the HEX
 
+def SMC(line):
+    InputStrings = [("0"*(8-math.floor(math.log(n,2))))+bin(n)[2:] for n in range(1,128)] + ["00000000"]
+    output = []
+    for string in InputStrings:
+        output.append(string+line["Q0"]+line["Q1"] + line["Q2"]+"00")
+        output.append(string+line["Q0"]+line["Q1"] + line["Q2"]+"01")
+        output.append(string+line["Q0"]+line["Q1"] + line["Q2"]+"10")
+        output.append(string+line["Q0"]+line["Q1"] + line["Q2"]+"11")
+    return output
+
+
 def line_input_vector(line):
         #computer the input vector:
+        if line["Instruction (15 downto 8)"] == "0XXXXXXX":
+            # print(SMC(line))
+            # print(len(SMC(line)))
+            # LengthCounter = Counter([len(x) for x in SMC(line)])
+            # print(LengthCounter)
+            # exit()
+            return SMC(line)
         StateAndInstruction = line["Instruction (15 downto 8)"]+line["Q0"]+line["Q1"] + line["Q2"]
         #compute the flags
         if line["AB FLAG"] == "X" and line["Carry Flag"] == "X":
@@ -84,6 +102,9 @@ def HexDump(HexMap, target):
 # 01011101 10011111
 # =93 for first chip
 # =159 for second chip
+
+
+
 
 HV1 = GrabHexValues()[0]
 HV2 = GrabHexValues()[1]
